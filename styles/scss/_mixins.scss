@@ -1,0 +1,31 @@
+@mixin Spaces($m, $p) {
+    margin: $m;
+    padding: $p;
+}
+
+@mixin Size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin StandartSize {
+    @include Spaces(0,0);
+    box-sizing: border-box;
+}
+
+@mixin AbsPos($t, $r, $b, $l){
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+}
+
+@mixin FlexCenter {
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
