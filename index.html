@@ -30,6 +30,10 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous">
     </script>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
 
     <!-- ПОДКЛЮЧЕНИЕ СТИЛЕЙ -->
     <!-- шрифты -->
@@ -37,19 +41,51 @@
     <!-- медиа-запросы -->
     <link rel="stylesheet" href="styles/css/media.css">
     <!-- нормализация стилей -->
-    <link rel="stylesheet" href="styles/css/style.css">
+    <link rel="stylesheet" href="styles/css/normalize.css">
     <!-- основные стили -->
     <link rel="stylesheet" href="styles/css/style.css">
 
     <!-- ПОДКЛЮЧЕНИЕ СКРИПТОВ -->
     <!-- основные скрипты-->
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
 
 </head>
 
+
 <body>
-    
+
     <header class = "main_header">
+
+        <h1 class = "header_title">МТУСИ</h1>
+        <nav class = "header_nav">
+            <div class="nav_contact">
+                <div class="nav_contact_social">
+                    <div class="nav_contact_vk">
+                        <a href="https://vk.com/mtuci" title = "Сообщество МТУСИ Вконтакте">
+                            <i class="fa fa-vk" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="nav_contact_instagram">
+                        <a href="https://www.instagram.com/mtuci.live/?hl=ru" title = "Аккаунт МТУСИ в Instaram">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="nav_contact_youtube">
+                        <a href="https://www.youtube.com/channel/UCm7wjFCyqBot675bUlWll7g" title = "Канал МТУСИ на YouTube">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_pages">
+                <div>Факультеты</div>
+                <div>Абитуриенту</div>
+                <div>Студенту</div>
+                <div>Сотруднику</div>
+                <div>Приёмная комиссия</div>
+            </div>
+        </nav>
+        <div class="header_login">Вход</div>
 
     </header>
 
@@ -59,7 +95,13 @@
 
     <main class = "main_content">
 
-        <section class = "section_intro"></section>
+        <section class = "section_intro">
+            <div id="super_element">
+                <div class="wrapper">
+                    <div id="super_inner_element"></div>
+                </div>
+            </div>
+        </section>
 
 
 
@@ -75,6 +117,8 @@
         <section class = "section_map"></section>
 
     </main>
+
+    <section class = "section_map"></section>
 
     <footer class = "main_footer">
 

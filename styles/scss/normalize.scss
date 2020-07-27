@@ -1,17 +1,19 @@
 @import "_mixins.scss";
 
-*{
-    @include StandartSize();
-
-    &:before{
-        @include StandartSize();
-    }
-
-    &:after{
-        @include StandartSize();
-    }
+html{
+    box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6{
+*,*:before,*:after{
+    @include StandartSize();
+}
+
+h1,h2,h3,h4,h5,h6{
     @include Spaces(0,0);
+    font: inherit;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
