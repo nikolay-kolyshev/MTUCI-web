@@ -7,14 +7,8 @@ html{
     font-size: 10px;
 }
 
-body{
-    background-color: $backDarkColor;
-}
-
-// Header
+// ---------- Header ----------
 .main_header{
-    
-    background-color: $mainColor;
     color: $mainLightColor;
 
     font-size: 2.5rem;
@@ -22,10 +16,10 @@ body{
     width: 100%;
     height: 128px;
     margin-top: 43px;
-    transition: all ease-in 0.3s;
+    transition: all cubic-bezier(.64,.15,.89,.83) 0.3s;
 
     position: sticky;
-    top: -1px;
+    top: 0px;
 
     display: flex;
     justify-content: space-between;
@@ -33,78 +27,160 @@ body{
 
 }
 
+.header_aside{
+    width: 332px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after{
+        content: "";
+        display: block;
+
+        @include Size(0, 100%);
+        position: absolute;
+        @include AbsPos(0, auto, auto, 0);
+        z-index: -1;
+
+        background-color: hsla(360,100,100,0.5);
+        transition: all cubic-bezier(.64,.15,.89,.83) 0.3s;
+    }
+}
 .header_title{
-    font-size: 8.9rem;
+    color: $mainLightColor;
+    font-size: 6.5rem;
 }
 
 .header_nav{
-
     width: 1002px;
-
-    .nav_contact{
-
-        display: flex;
-        align-items: center;
-
-        &:before{
-            content: "";
-            display: block;
-
-            background-color: white;
-            width: 100%;
-            height: 3px;
-            border-radius: 3px;
-
-        }
-
-        &:after{
-            content: "";
-            display: block;
-
-            background-color: white;
-            width: 95px;
-            height: 3px;
-            border-radius: 3px;
-        }
-    }
-
-    .nav_contact_social{
-        width: 155px;
-        display: flex;
-        justify-content: space-around;
-        justify-content: space-evenly;
-
-        cursor: pointer;
-
-        a{
-            display: block;
-            transition: transform ease-in 0.3s;
-            &:hover{
-                transform: scale(1.15);
-            }
-        }
-    }
-    .social_sticky{
-        background-color: red;
-    }
-
-    .nav_pages{
-        display: flex;
-        justify-content: space-between;
-    }
-    .nav_pages_sticky{
-        background-color: red;
-    }
-
 }
+.nav_pages{
+    display: flex;
+    justify-content: space-between;
+
+    cursor: pointer;
+
+    a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    a:after{
+        content: "";
+        display: block;
+
+        @include Size(0%, 3px);
+        background-color: $mainLightColor;
+        transition: width ease 0.3s;
+
+        position: absolute;
+        bottom: -10px;
+    }
+
+    a:hover:after{
+        width: 100%;
+    }
+}
+.nav_contact{
+
+    display: flex;
+    align-items: center;
+    transition: color background-color cubic-bezier(.64,.15,.89,.83) 0.3s;
+
+    &:before{
+        content: "";
+        display: block;
+
+        background-color: white;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+
+    }
+
+    &:after{
+        content: "";
+        display: block;
+
+        background-color: white;
+        width: 95px;
+        height: 3px;
+        border-radius: 3px;
+    }
+}
+.nav_contact_social{
+    width: 155px;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+
+    a{
+        display: block;
+        transition: transform ease-in 0.3s;
+        &:hover{
+            transform: scale(1.15);
+        }
+    }
+}
+
+//классы для события sticky у header
 .main_header_sticky{
-    background-color: hsla(360,100,100,0.7);
+    background-color: hsla(360,100,100,1);
     color: $mainColor;
     height: 122px;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px) grayscale(100%);
 }
+.nav_contact_sticky{
+    opacity: 0;
+}
+.header_login_sticky{
+    #rect{
+        fill: $mainColor;
+    }
+    #inner{
+        fill: $mainLightColor;
+    }
+    #line, #user{
+        stroke: $mainColor;
+    }
+}
+.header_aside_sticky{
+
+    &:after{
+        background-color: $mainColor;
+        width: 332px;
+    }
+}
+
+
+.header_login{
+    display: flex;
+    align-items: center;
+    #Login > *, #user{
+        transition: all cubic-bezier(.64,.15,.89,.83) 0.3s
+    };
+}
+
+
+
+
+
+
+.main_content{
+    margin-top: -171px;
+}
+
+
 
 section{
     background-color: $backDarkColor;
     height: 100vh;
+}
+
+.section_intro{
+    background-color: $mainColor;
 }

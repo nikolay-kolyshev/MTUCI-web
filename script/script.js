@@ -1,18 +1,9 @@
 window.onload = () =>{
 
-    // const observer = new IntersectionObserver( 
-    //   ([e]) => {
-    //     e.target.classList.toggle('main_header_sticky', e.intersectionRatio < 1);
-    //     // e.target.classList.toggle('main_header_sticky', e.intersectionRatio < 1);
-    //   },
-    //   {
-    //     root: null,
-    //     rootMargin: "-1px 0px 0px 0px",
-    //     threshold: [1]
-    //   }
-    // );
-
-    const social = document.querySelector(".nav_contact_social");
+    const stickyHeader = document.querySelector(".main_header");
+    const stickyContact = $(".nav_contact");
+    const stickyLogin = document.querySelector(".header_login");
+    const stickyAside = document.querySelector(".header_aside");
 
     const option = {
         root: null,
@@ -24,18 +15,20 @@ window.onload = () =>{
       entries.forEach(entry => {
           if (entry.intersectionRatio < 1)
           {
-            entry.target.classList.add('main_header_sticky');
-            social.classList.add("social_sticky");
+            stickyHeader.classList.add("main_header_sticky");
+            stickyContact.slideUp(300);
+            stickyLogin.classList.add("header_login_sticky");
+            stickyAside.classList.add("header_aside_sticky");
           }
           else
           {
-            entry.target.classList.remove('main_header_sticky');
-            social.classList.remove("social_sticky");
+            stickyHeader.classList.remove("main_header_sticky");
+            stickyContact.slideDown(300);
+            stickyLogin.classList.remove("header_login_sticky");
+            stickyAside.classList.remove("header_aside_sticky");
           }
       });
     }
-
-    const stickyHeader = document.querySelector('.main_header');
 
     const observer = new IntersectionObserver(callback, option);
 
