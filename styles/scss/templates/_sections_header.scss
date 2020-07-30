@@ -1,0 +1,65 @@
+// ---------- Sections-Hedear ----------
+
+.sections_header{
+
+    position: absolute;
+    top: 190px;
+    display: flex;
+    z-index: 1000;
+
+    &_icon{
+        bottom: 0;
+        position: absolute;
+        width: 91px;
+    }
+
+    &_title{
+        background-color: $mainColor;
+        color: $mainLightColor;
+        font-family: $titleFont;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+        padding: 18px 115px;
+        position: relative;
+
+        &:before{
+            content: "";
+            display: block;
+            background-color: inherit;
+            width: 25px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            border-radius: 0 12px 24px 24px;
+        }
+    }
+
+}
+
+.sections_header_left{
+
+    left: 0;
+
+    .sections_header_icon{
+        right: -131px;
+    }
+
+    .sections_header_title:before{
+        right: -32px;
+    }
+
+}
+
+.sections_header_right{
+
+    right: 0;
+
+    .sections_header_icon{
+        left: -131px;
+    }
+
+    .sections_header_title:before{
+        left: -32px;
+    }
+
+}

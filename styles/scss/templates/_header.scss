@@ -1,0 +1,225 @@
+// ---------- Header ----------
+
+.main_header{
+
+    background-color: $mainColor;
+    color: $mainLightColor;
+
+    font-size: 2.5rem;
+
+    z-index: 100000;
+
+    width: 100%;
+    height: 122px;
+    margin-top: 43px;
+    transition: all cubic-bezier(.64,.15,.89,.83) 0.3s;
+
+    position: sticky;
+    top: 0px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header_general{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    height: 100%;
+    width: calc(100% - 332px);
+}
+
+.header_aside{
+    width: 360px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:after{
+        content: "";
+        display: block;
+
+        @include Size(360px, 100%);
+        position: absolute;
+        left: -360px;
+        z-index: -1;
+
+        background-color: hsla(360,100,100,0.4);
+        transition: all cubic-bezier(.64,.15,.89,.83) 0.3s;
+    }
+}
+
+.header_title{
+    color: $mainLightColor;
+    font-size: 6.5rem;
+    text-transform: uppercase;
+}
+
+.header_nav{
+    width: 1100px;
+}
+.nav_pages{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+    a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a:before{
+        content: "";
+        display: block;
+
+        @include Size(calc(50% + 55px), 122px);
+        background-color: transparent;
+        transition: all ease 0.3s;
+        z-index: -1;
+
+        position: absolute;
+    }
+
+    a:after{
+        content: "";
+        display: block;
+        
+
+
+        @include Size(0%, 3px);
+        background-color: $mainLightColor;
+        border-radius: 3px;
+        transition: width ease 0.3s;
+
+        position: absolute;
+        bottom: -10px;
+    }
+
+    a:hover:after{
+        width: 100%;
+    }
+}
+.nav_contact{
+
+    display: flex;
+    align-items: center;
+    transition: opacity background-color cubic-bezier(.64,.15,.89,.83) 0.3s;
+    font-size: 3rem;
+
+    &:before{
+        content: "";
+        display: block;
+
+        background-color: white;
+        width: 100%;
+        height: 3px;
+        border-radius: 3px;
+
+    }
+
+    &:after{
+        content: "";
+        display: block;
+
+        background-color: white;
+        width: 95px;
+        height: 3px;
+        border-radius: 3px;
+    }
+}
+.nav_contact_social{
+    width: 180px;
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+    cursor: pointer;
+
+    a{
+        display: block;
+        transition: transform ease 0.3s;
+        &:hover{
+            transform: scale(1.15);
+        }
+    }
+}
+
+.header_login{
+    height: 100%;
+    #Login > *, #user{
+        transition: all cubic-bezier(.64,.15,.89,.83) 0.3s
+    };
+
+    a{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &:hover{
+            #rect{
+                fill: $mainColor;
+                stroke: $mainLightColor;
+                stroke-width: 3px;
+            }
+            #inner{
+                fill: $mainLightColor;
+            }
+        }
+    }
+}
+
+//классы для события sticky у header
+.main_header_sticky{
+    background-color: hsla(360,100,100,1);
+    color: $mainColor;
+    backdrop-filter:grayscale(100%);
+}
+.nav_contact_sticky{
+    opacity: 0;
+}
+.header_login_sticky{
+    #rect{
+        fill: $mainColor;
+    }
+    #inner{
+        fill: $mainLightColor;
+    }
+    #line, #user{
+        stroke: $mainColor;
+    }
+    a:hover{
+        #rect{
+            fill: $mainLightColor;
+            stroke: $mainColor;
+            stroke-width: 3px;
+        }
+        #inner{
+            fill: $mainColor;
+        }
+    }
+}
+.header_aside_sticky{
+    &:after{
+        background-color: $mainColor;
+        left:0;
+    }
+}
+.nav_pages_sticky{
+    a:hover:before{
+        background-color: $backColor;
+        width: calc(100% + 55px);
+    }
+    a:after{
+        background-color: $mainColor;
+        bottom: -42px;
+        height: 5px;
+    }
+    a:hover:after{
+        width: calc(100% + 55px);
+    }
+}
