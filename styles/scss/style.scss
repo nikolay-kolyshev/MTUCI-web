@@ -8,6 +8,7 @@
 @import "templates/_grid.scss";
 @import "templates/_header.scss";
 @import "templates/_sections_header.scss";
+@import "templates/_slider.scss";
 
 // Блоки на первой странице (лендинге)
 @import "blocks/_01_intro.scss";
@@ -24,3 +25,4 @@ html{
 .main_content{
     margin-top: -165px;
 }
+

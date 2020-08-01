@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61">
+  <g id="science_arrow_right" transform="translate(-1262 -2.254)">
+    <circle id="Эллипс_64" data-name="Эллипс 64" cx="30.5" cy="30.5" r="30.5" transform="translate(1262 2.254)" fill="#306"/>
+    <g id="arrow" transform="translate(1287.335 16.324)">
+      <path id="Контур_1" data-name="Контур 1" d="M127.374,15.5,113.934.269a.739.739,0,0,0-1.14,0,1,1,0,0,0,0,1.292L125.66,16.142,112.793,30.723a1,1,0,0,0,0,1.292.767.767,0,0,0,.567.271.744.744,0,0,0,.567-.271l13.44-15.23A1,1,0,0,0,127.374,15.5Z" transform="translate(-112.556 0)" stroke="#fff" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

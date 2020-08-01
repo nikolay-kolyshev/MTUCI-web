@@ -4,13 +4,16 @@
 
 .section_science{
 
-
+    background-color: $backDarkColor;
     position: relative;
 
-    .sections_header_icon{
-        width: 105px;
-        right: -145px;
+    .sections_header
+    {
+        top: 90px;
+        &_icon{
+            width: 105px;
+            right: -145px;
+        }
     }
-
 
 }

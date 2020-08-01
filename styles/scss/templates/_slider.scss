@@ -1,0 +1,217 @@
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+
+.science_slider{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+
+.science_slider_main{
+
+    @include Size(70%, 977px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .slick-slide.slick-current{
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    // внутренние элементы (картинки)
+    &_item{
+        text-align: center;
+        @include Size(100%, 977px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.3;
+        filter: grayscale(100);
+        cursor: pointer;
+        transition: filter ease 1s, opacity ease 1s;
+    
+        img{
+            @include Size(100%,100%);
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .item_description{
+            background-color: $mainLightColor;
+            opacity: 0.83;
+            text-transform: uppercase;
+            font-size: 9.8rem;
+            color: $mainColor;
+
+            position: absolute;
+            width: 100%;
+            margin-top: 24px;
+            padding: 64px 0;
+        }
+    }
+
+    // Кнопки (вправо и влево)
+    .slick-arrow {
+        // top: 50%;
+        margin-top: 30px;
+        position: absolute;
+        z-index: 1000;
+        background: none;
+        cursor: pointer;
+        svg{
+            circle {
+                transition: fill ease 0.4s;
+            }
+            path{
+                transition: stroke ease 0.4s;
+            }
+        }
+
+        &:hover svg{
+            circle{
+                fill: $mainLightColor;
+            }
+            path{
+                stroke: $mainColor;
+            }
+        }
+    }
+    // Кнопка влево
+    .slick-arrow.slick-prev{
+        left: 20px;
+    }
+    // Кнопка вправо
+    .slick-arrow.slick-next{
+        right: 20px;
+    }
+    .slick-disabled{
+        opacity: 0.4;
+        svg{
+            circle{
+                fill: $backDarkColor;
+            }
+            path{
+                stroke: $mainLightColor;
+            }
+            &:hover{
+                circle{
+                    fill: $backDarkColor;
+                }
+                path{
+                    stroke: $mainLightColor;
+                }
+            }
+        }
+    }
+}
+
+.science_slider_secondary{
+
+    @include Size(30%, 720px);
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    .slick-track{
+        display: block;
+    }
+
+    .slick-slide.slick-current{
+        filter: grayscale(0);
+        opacity: 1;
+    }
+
+    // внутренние элементы (картинки)
+    &_item{
+        height: 240px;
+        opacity: 0.3;
+        filter: grayscale(100);
+        cursor: pointer;
+        transition: filter ease 1s, opacity ease 1s;
+        display: flex;
+        
+    
+        img{
+            @include Size(100%,100%);
+            object-fit: cover;
+        }
+    }
+
+    // Точки
+    .slick-dots{
+        align-self: center;
+        bottom: 30px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .slick-dots li{
+        padding: 0 12px;
+        list-style: none;
+    }
+    // Элемент точки
+    .slick-dots li button{
+        font-size: 0;
+        @include Size(23px, 23px);
+        border-radius: 50%;
+        background-color: hsla(0,0,0,0);
+        border: solid 2px $mainLightColor;
+        box-shadow: 0 0 10px $mainLightColor;
+        transition: background-color ease 0.4s,
+                    box-shadow ease 0.4s,;
+        cursor: pointer;
+    }
+    // Активная точка
+    .slick-dots li.slick-active button{
+        background-color: $mainLightColor;
+        box-shadow: none;
+    }
+}
+
