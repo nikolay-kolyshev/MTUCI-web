@@ -1,11 +1,15 @@
 // ---------- Science ----------
 
 
-
 .section_science{
 
     background-color: $backDarkColor;
     position: relative;
+
+    .science_inner{
+        position: relative;
+        z-index: 1000;
+    }
 
     .sections_header
     {
@@ -16,4 +20,87 @@
         }
     }
 
+    .particles_inner{
+
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+
+        canvas{
+            display: block;
+            vertical-align: bottom;
+        }
+
+    }
+
+    .science_info{
+
+        display: flex;
+        padding: 155px 0 108px;
+        font-size: 2.6rem;
+        color: $mainColor;
+    
+        &_item{ 
+            flex-basis: 300px;
+            flex-grow: 1;
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+    
+            .science_info_header{
+                .header_icon{
+                    height: 270px;
+                }
+                .header_title{
+                    font-size: 5.0rem;
+                    font-family: $titleFont;
+                    font-weight: 700;
+                    padding: 15px 0;
+                }
+            }
+    
+            .science_info_description{
+    
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+    
+                .description_text{
+                    display: flex;
+                    align-items: center;
+                    flex-grow: 1;
+                    padding: 25px 0;
+                    width: 90%;
+                }
+                .description_button{
+                    font-family: $titleFont;
+                    font-size: 2.3rem;
+                    font-weight: 500;
+                    width: inherit;
+                    background-color: $backColor;
+                    padding: 15px 30px;
+                }
+    
+                &:before{
+                    content: "";
+                    display: block;
+    
+                    background-color: $backColor;
+                    @include Size(100%, 5px);
+                    border-radius: 5px;
+                }
+            }
+    
+        }
+    
+    }
+
 }
+
+

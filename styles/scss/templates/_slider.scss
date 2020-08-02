@@ -153,6 +153,7 @@
 
     @include Size(30%, 720px);
     overflow: hidden;
+    position: relative;
 
     display: flex;
     flex-direction: column;

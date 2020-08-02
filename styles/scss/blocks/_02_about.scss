@@ -22,7 +22,6 @@
         display: flex;
     }
 
-
 }
 
 .about_more{
@@ -68,7 +67,7 @@
 
         }
 
-        .about_job{
+        .about_more_icon_inner{
 
             position: relative;
             display: flex;
@@ -87,10 +86,10 @@
 
                 .percentage_value{
                     font-weight: 600;
-                    font-size: 11.7rem;
+                    font-size: 9rem;
                 }
 
-                .percentage_description{
+                .percentage_name{
                     text-align: center;
                     font-family: $titleFont;
                     font-weight: 400;
@@ -111,17 +110,14 @@
         flex-direction: column;
         justify-content: space-between;
         
-        .description_main{
-            @include Size(100%, calc(100% - 102px));
+        .description_text{
+            @include Size(85%, calc(100% - 102px));
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
             text-align: center;
-            margin-bottom: 40px;
-            p{
-                width: 80%;
-            }
+            margin: 0 auto 40px;
         }
         .description_button{
         
