@@ -26,8 +26,8 @@ $( function() {
         dots: false,
         speed: 1000,
         easing: "ease",
-        autoplay: true,
-        autoplaySpeed: 2000,
+        autoplay: false,
+        autoplaySpeed: 4000,
         asNavFor: ".science_slider_secondary",
         infinite: false
     
@@ -58,8 +58,7 @@ $( function() {
 
         speed: 1000,
         easing: "ease",
-        autoplay: true,
-        autoplaySpeed: 2000,
+        autoplay: false,
         asNavFor: ".science_slider_main",
         
         dots: true,

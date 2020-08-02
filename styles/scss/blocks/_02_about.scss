@@ -77,12 +77,27 @@
 
             &_percentage{
                 font-family: $titleFont;
-                font-weight: 600;
-                font-size: 11.7rem;
                 color: $mainColor;
-
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
 
                 position: absolute;
+
+                .percentage_value{
+                    font-weight: 600;
+                    font-size: 11.7rem;
+                }
+
+                .percentage_description{
+                    text-align: center;
+                    font-family: $titleFont;
+                    font-weight: 400;
+                    font-size: 2.1rem;
+                    color: $mainColor;
+                    text-transform: uppercase;
+                }
             }
         
         }

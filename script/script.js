@@ -72,7 +72,8 @@ window.onload = ()=> {
     })
     .on("circle-animation-progress", function(event, progress, stepValue){
       $(this).find(".about_job_percentage .percentage_value")
-      .text(parseInt(String(stepValue.toFixed(2)).substr(2))+"%")
+      // .text(parseInt(String(stepValue.toFixed(2)).substr(2))+"%")
+      .text((parseFloat(stepValue.toFixed(2))) + "+")
     });
   }
 
