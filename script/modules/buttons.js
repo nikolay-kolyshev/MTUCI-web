@@ -1,5 +1,5 @@
-$(function() {  
-    $('.description_button')
+export default function sectionAboutBtnInit() { 
+    $('.section_about .description_button')
       .on('mouseenter', function(e) {
               var parentOffset = $(this).offset(),
               relX = e.pageX - parentOffset.left,
@@ -12,5 +12,5 @@ $(function() {
               relY = e.pageY - parentOffset.top;
           $(this).find('span').css({top:relY, left:relX})
       });
-    $('[href=#]').click(function(){return false});
-  });
+    $('[href="#"]').click(function(){return false});
+}

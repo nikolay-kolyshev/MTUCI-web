@@ -1,4 +1,4 @@
-$(function() {
+export default function hamburgerInit() {
     
     let hamburger = $('#hamburger'),
     isClosed = false;
@@ -20,4 +20,4 @@ $(function() {
       }
     }
 
-  });
+}

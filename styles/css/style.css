@@ -1171,7 +1171,6 @@
 
 .section_science .particles_inner canvas {
   display: block;
-  vertical-align: bottom;
 }
 
 .section_science .science_info {
