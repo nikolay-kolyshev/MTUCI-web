@@ -148,8 +148,11 @@
     
     .header_login{
         height: 100%;
+        #inner {
+            font-family:$mainFont;
+        }
         #Login > *, #user{
-            transition: all cubic-bezier(.64,.15,.89,.83) 0.3s
+            transition: all cubic-bezier(.64,.15,.89,.83) 0.3s ;
         };
     
         a{

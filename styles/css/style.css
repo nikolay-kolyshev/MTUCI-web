@@ -381,6 +381,10 @@
   height: 100%;
 }
 
+.main_header .header_login #inner {
+  font-family: "Rounded Mplus 1c", Calibri, Arial, sans-serif;
+}
+
 .main_header .header_login #Login > *, .main_header .header_login #user {
   -webkit-transition: all cubic-bezier(0.64, 0.15, 0.89, 0.83) 0.3s;
   transition: all cubic-bezier(0.64, 0.15, 0.89, 0.83) 0.3s;
