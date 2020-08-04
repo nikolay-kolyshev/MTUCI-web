@@ -8,51 +8,109 @@
         justify-content: center;
         
         align-items: center ; 
-        background-color: red ;
+        background-color: rgba(0, 0, 0, 0.123);
+        color: $mainLightColor;
         &_item{
             position: relative;
             background-color: green ;
             @include Size (511px,634px);
             transform: rotate(-9deg);
+            
+            // display: flex;
+            // flex-direction: column;
+            // @include FlexCenter();
+
+            &_inner{
+
+                position: absolute;
+
+                &_title{
+                    font-size: 3.9rem;
+                    text-transform: uppercase;
+    
+                    position: absolute;
+                    top: 0;
+                    z-index: 10001;
+    
+                    span{
+                        display: block;
+                    }
+                }
+
+            }
+
             &_img {
                 @include Size (100%,100%) ;
                 object-fit: cover;
-            }  
+            }
+
+
+
             &:first-child{
                 margin-top: 34px;
                 transform: rotate(-7deg);
-                &:after {
-                    
+
+                &:before {
+                    content:"24.07";
+                    color: hsl(180, 95%, 36%);
                     @include AbsPos (auto, auto, -45px, -40px);
+                    border-color: hsl(180, 95%, 36%);
+                }
+                &:after{
+                    background-color: hsla(180, 76%, 50%, 0.48);
                 }
             }
             &:nth-child(2){
                 transform: rotate(8deg);
-                &:after {
-        
+                &:before {
+                    content:"02.08";
+                    color: hsl(322, 100%, 45%);
                     @include AbsPos (-45px, auto, auto, -35px);
+                    border-color: hsl(322, 100%, 45%);
                 }
-                
+                &:after{
+                    background-color: hsla(322, 100%, 45%, 0.48);
+                }
             }
             &:last-child{
                 margin-top: 117px;
                 transform: rotate(18deg);
-                &:after {
-        
+                &:before {
+                    content:"вчера";
+                    color: hsl(22, 100%, 50%);
                     @include AbsPos (auto, -45px, -35px, auto);
+                    border-color: hsl(22, 100%, 50%);
+                }
+                &:after{
+                    background-color: hsla(22, 100%, 50%, 0.48);
                 }
 
             }
-            &:after{
+            &:before{
                 content:"";
-                 display: block;
+                display: block;
+
+                background-color: white;
+                font-size: 3.9rem;
+                font-weight: 500;
                 border: 4px black solid ;
                 border-radius: 50%;
+
                 @include Size (138px,138px); 
+                position: absolute; 
                 z-index: 10000; 
-                background-color: white;
+
+                display: flex;
+                @include FlexCenter();
+            }
+            &:after{
+                content: "";
+                display: block;
+
                 position: absolute;
-                
+                top: 0;
+                left: 0;
+                @include Size(100%,100%);
             }
         }
     }
