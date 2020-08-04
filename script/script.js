@@ -1,6 +1,6 @@
 import sliderInit from "./modules/slider.js";
 import hamburgerInit from "./modules/hamburger.js";
-import sectionAboutBtnInit from "./modules/buttons.js";
+import buttonsInit from "./modules/buttons.js";
 import headerStickyInit from "./modules/headerSticky.js";
 import svgIntroInit from "./modules/svgIntro.js";
 // import CircleIcon from "./modules/sectionAbout/aboutCircle.js";
@@ -15,6 +15,9 @@ window.onload = ()=> {
     svgIntroInit();
     aboutMenuInit();
     decorateBackInit();
-    sectionAboutBtnInit();
+    
+    // Buttons Initializtion
+    buttonsInit(".section_about .about_more .description_button"); // Section About
+    buttonsInit(".section_science .science_info .description_button"); // Section Science
 
 }

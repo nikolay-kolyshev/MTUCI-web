@@ -34,6 +34,10 @@
 
     }
 
+    .wrapper_long_block{
+        padding-bottom: 400px;
+    }
+
     .science_info{
 
         display: flex;
@@ -78,12 +82,49 @@
                     width: 90%;
                 }
                 .description_button{
+
+                    width: inherit;
+                    padding: 15px 30px;
+                
+                    color: $mainColor;
                     font-family: $titleFont;
                     font-size: 2.3rem;
                     font-weight: 500;
-                    width: inherit;
                     background-color: $backColor;
-                    padding: 15px 30px;
+                    position: relative;
+                    z-index: 101;
+                    overflow: hidden;
+                
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                
+                    transition: color ease 0.4s;
+
+                    span{
+                        position: absolute;
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border-radius: 50%;
+                        background-color: $mainColor;
+                        transition: width ease 0.45s, height ease 0.45s;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+                
+                    &:hover{
+                        color: $mainLightColor;
+                    }
+                
+                    &:hover span{
+                        width: 225%;
+                        height: 800%;
+                    }
+                
+                    &:active{
+                        background-color: $mainLightColor;
+                    }
                 }
     
                 &:before{
@@ -99,6 +140,49 @@
         }
     
     }
+
+    .science_more{
+        display: flex;
+        justify-content: center;
+        
+        &_link{
+            font-size: 4.2rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            color: $mainColor;
+            font-weight: 300;
+
+            &:after{
+                content: "";
+                display: block;
+
+                background-color: $mainLightColor;
+                @include Size(93%, 3px);
+                position: absolute;
+                bottom: -7px;
+                transition: width ease 0.4s;
+            }
+
+            &:hover:after{
+                width: 60%;
+            }
+        }
+    }
+
+
+    // &:after{
+    //     content: "";
+    //     display: block;
+
+    //     height: 300px;
+    //     width: 120%;
+    //     transform: rotate(-5deg);
+    //     position: absolute;
+    //     bottom: -200px;
+
+    //     background-color: white;
+    // }
 
 }
 

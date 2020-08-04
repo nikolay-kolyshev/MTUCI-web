@@ -1,5 +1,5 @@
-export default function sectionAboutBtnInit() { 
-    $('.section_about .description_button')
+export default function sectionAboutBtnInit(classSelector) { 
+    $(classSelector)
       .on('mouseenter', function(e) {
               var parentOffset = $(this).offset(),
               relX = e.pageX - parentOffset.left,
