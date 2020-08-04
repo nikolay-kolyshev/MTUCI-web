@@ -182,13 +182,10 @@
           animation-fill-mode: forwards;
 }
 
-.wrapper_one_screen {
+.wrapper_one_screen,
+.wrapper_long_block,
+.wrapper_news {
   width: 1600px;
-  margin: 0 auto;
-}
-
-.wrapper_long_block {
-  width: 1360px;
   margin: 0 auto;
 }
 
@@ -1349,6 +1346,89 @@
 
 .section_science .science_more_link:hover:after {
   width: 60%;
+}
+
+.section_news .wrapper_news {
+  padding: 220px 0;
+}
+
+.section_news .news_all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: red;
+}
+
+.section_news .news_all_item {
+  position: relative;
+  background-color: green;
+  width: 511px;
+  height: 634px;
+  -webkit-transform: rotate(-9deg);
+          transform: rotate(-9deg);
+}
+
+.section_news .news_all_item_img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.section_news .news_all_item:first-child {
+  margin-top: 34px;
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+}
+
+.section_news .news_all_item:first-child:after {
+  top: auto;
+  right: auto;
+  bottom: -45px;
+  left: -40px;
+}
+
+.section_news .news_all_item:nth-child(2) {
+  -webkit-transform: rotate(8deg);
+          transform: rotate(8deg);
+}
+
+.section_news .news_all_item:nth-child(2):after {
+  top: -45px;
+  right: auto;
+  bottom: auto;
+  left: -35px;
+}
+
+.section_news .news_all_item:last-child {
+  margin-top: 117px;
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+.section_news .news_all_item:last-child:after {
+  top: auto;
+  right: -45px;
+  bottom: -35px;
+  left: auto;
+}
+
+.section_news .news_all_item:after {
+  content: "";
+  display: block;
+  border: 4px black solid;
+  border-radius: 50%;
+  width: 138px;
+  height: 138px;
+  z-index: 10000;
+  background-color: white;
+  position: absolute;
 }
 
 html {
