@@ -14,7 +14,8 @@ window.onload = ()=> {
     hamburgerInit();
     svgIntroInit();
     aboutMenuInit();
-    decorateBackInit();
+    decorateBackInit("particles_science");
+    decorateBackInit("particles_partners");
     
     // Buttons Initializtion
     buttonsInit(".section_about .about_more .description_button"); // Section About

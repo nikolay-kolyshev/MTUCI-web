@@ -1,6 +1,6 @@
-export default function decorateBackInit() {
+export default function decorateBackInit(particlesId) {
 
-    particlesJS("particles_js", {
+    particlesJS(particlesId, {
         particles: {
           number: {
             value: 50,

@@ -1,0 +1,162 @@
+
+.section_partners{
+    
+    position: relative;
+     //background-color: rgb(195, 63, 63);
+    //background-color: rgb(177, 177, 177);
+    .partners_inner{
+        position: relative;
+        z-index: 1000;
+    }
+    background: $backDarkColor;
+    .Partners_Field_Wrapper{
+        //background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 500px
+        ;
+    }
+    .Partners_Field{
+        width: 1336px ;
+        height: 1356px;
+       display: grid;
+       grid-template-areas:"ContainerKaspersky" "ContainerNokia" "ContainerHuawei";
+       grid-template-rows: 1fr 1fr 1fr;
+        .Container_Kaspersky{
+            display: grid;
+            grid-template-areas:"KasperskyLogo KasperskyDescription" ;
+            grid-template-columns: 1fr 1fr;
+            grid-area: ContainerKaspersky;
+            
+            .Kaspersky_Logo{
+                grid-area: KasperskyLogo;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #007461;
+            }
+            .Kaspersky_Description{
+                grid-area: KasperskyDescription;
+                .KasperskyWrapper{
+                    margin-left: 50px;
+                }
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .Kaspersky_Name{
+                    color: #007461;
+                    font-size: 50px;
+                    // margin-bottom: 10px;
+                }
+                .Kaspersky_Information{
+                    color:#003C32;
+                    font-size: 32px;
+                    // margin-bottom: 10px;
+                }
+                .Kaspersky_Information_Button{
+                    color: #007461;
+                    font-size: 23px;
+                    width: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: solid 4px #007461;
+                }
+            }
+        }
+        .Container_Nokia{
+            display: grid;
+            grid-template-areas:" NokiaDescription NokiaLogo" ;
+            grid-template-columns: 1fr 1fr;
+            grid-area: ContainerNokia;
+            .Nokia_Logo{
+                grid-area: NokiaLogo;
+                order: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #ffffff;
+            }
+            
+            .Nokia_Description{
+                .NokiaWrapper{
+                    margin-right: 50px;
+                    text-align: right;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                }
+                grid-area: NokiaDescription;
+                order: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .Nokia_Name{
+                    color: #1C4598;
+                    font-size: 50px;
+                    // margin-bottom: 10px;
+                }
+                .Nokia_Information{
+                    
+                    color:#0A1D43;
+                    font-size: 32px;
+                    // margin-bottom: 10px;
+                }
+                .Nokia_Information_Button{
+                    color:#1C4598;
+                    font-size: 23px;
+                    width: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: solid 4px #1C4598;
+                }
+            }
+        }
+        .Container_Huawei{
+            display: grid;
+            grid-template-areas:"HuaweiLogo HuaweiDescription" ;
+            grid-template-columns: 1fr 1fr;
+            grid-area: ContainerHuawei;
+            .Huawei_Logo{
+                grid-area: HuaweiLogo;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #E12229;
+            }
+            .Huawei_Description{
+                .HuaweiWrapper{
+                    margin-left: 50px;
+                }
+                grid-area: HuaweiDescription;
+                // margin-left: 50px;
+                // margin-bottom: 25px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                .Huawei_Name{
+                    color: #E12229;
+                    font-size: 50px;
+                    margin-bottom: 10px;
+                }
+                .Huawei_Information{
+                    color:#7A1014;
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                }
+                .Huawei_Information_Button{
+                    color: #E12229;
+                    font-size: 23px;
+                    width: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: solid 4px #E12229;
+                }
+            }
+        }
+    }
+}

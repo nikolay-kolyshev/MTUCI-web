@@ -15,6 +15,7 @@
 @import "blocks/_02_about.scss";
 @import "blocks/_03_science.scss";
 @import "blocks/_04_news.scss" ;
+@import "blocks/_05_partners.scss";
 
 html{
     font-family: $mainFont;
@@ -26,3 +27,16 @@ html{
     margin-top: -165px;
 }
 
+.particles_inner{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+
+    canvas{
+        display: block;
+    }
+
+}
