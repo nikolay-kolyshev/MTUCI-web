@@ -1,0 +1,28 @@
+.link_more{
+    display: flex;
+    justify-content: center;
+    
+    &_link{
+        font-size: 4.2rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        color: $mainColor;
+        font-weight: 300;
+
+        &:after{
+            content: "";
+            display: block;
+
+            background-color: $mainLightColor;
+            @include Size(93%, 3px);
+            position: absolute;
+            bottom: -7px;
+            transition: width ease 0.4s;
+        }
+
+        &:hover:after{
+            width: 60%;
+        }
+    }
+}
