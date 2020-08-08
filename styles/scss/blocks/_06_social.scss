@@ -1,0 +1,155 @@
+
+
+
+
+.section_social{
+
+    background-color: $backColor;
+    padding: 105px 0;
+    position: relative;
+
+    .sections_header
+    {
+    //    &_icon{
+    //         width: 105px;
+    //         right: -145px;
+    //     }
+    }
+
+    .wrapper_one_screen{
+        background-color: $mainLightColor;
+        height: 867px;
+    }
+
+    .section_social_inner{
+
+        display: flex;
+        font-size: 4rem;
+        height: 100%;
+
+        &_links{
+            font-size: 5.7rem;
+            width: 363px;
+            padding-right: 60px;
+            text-align: center;
+            color: $backDarkColor;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            &_active{
+                color: $mainColor;
+            }
+
+            &_wrapper{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                width: 70px;
+
+                &:before{
+
+                    content: "";
+                    display: block;
+                    background-color: $mainColor;
+                    border-radius: 4px;
+    
+                    @include Size(4px, 177px);
+    
+                }
+    
+                &:after{
+    
+                    content: "";
+                    display: block;
+                    background-color: $mainColor;
+                    border-radius: 4px;
+    
+                    @include Size(4px, 177px);
+    
+                }
+            }
+        }
+
+        &_gallery{
+
+            position: relative;
+            top: -27px;
+            right: -27px;
+        
+            height: calc(100% + 54px);
+            // height: 400px;
+
+            flex-grow: 1;
+        
+            display: grid;
+            grid-template-columns: 8fr 5fr 1fr 6fr;
+            grid-template-rows: 24% 10% 36% 24%;
+            grid-template-areas: "socialGallery1 socialGallery1 . ."
+                                 "socialGallery2 socialGallery3 socialGallery3 socialGallery3"
+                                 "socialGallery2 socialGallery4 socialGallery4 socialGallery5"
+                                 "socialGallery2 socialGallery6 socialGallery6 socialGallery6";
+
+            gap: 2%;
+        
+            &_item{
+                @include Size(100%, 100%);
+
+                a{
+                    img{
+                        @include Size(100%,100%);
+                        object-fit: cover;
+                        display: block;
+                    } 
+                }
+
+        
+                &:nth-child(1){
+                    grid-area: socialGallery1;
+                }
+                &:nth-child(2){
+                    grid-area: socialGallery2;
+                }
+                &:nth-child(3){
+                    grid-area: socialGallery3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 32px;
+                    &:before{
+                        content: "";
+                        display: block;
+
+                        background-color: $mainColor;
+                        border-radius: 4px;
+        
+                        @include Size(159px, 4px);
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+
+                        background-color: $mainColor;
+                        border-radius: 4px;
+        
+                        @include Size(159px, 4px);
+                    }
+                }
+                &:nth-child(4){
+                    grid-area: socialGallery4;
+                }
+                &:nth-child(5){
+                    grid-area: socialGallery5;
+                }
+                &:nth-child(6){
+                    grid-area: socialGallery6;
+                }
+            }
+            
+        }
+        
+    }
+    
+}

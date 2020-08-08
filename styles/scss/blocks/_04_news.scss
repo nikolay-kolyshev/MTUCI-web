@@ -1,6 +1,8 @@
 .section_news {
-  //  background-color: yellow    ;
+
+    overflow: hidden;
     position: relative;
+    
     &:before {
         content: "";
         display: block;
