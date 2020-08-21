@@ -1,0 +1,188 @@
+.popup{
+    background-color: rgba(51, 0, 102, 0.877);
+    backdrop-filter: grayscale(10);
+    @include Size(100%,100%);
+    display: flex;
+    @include FlexCenter();
+
+    opacity: 0;
+    visibility: hidden;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+
+    &_body{
+        background-color: $backColor;
+        color: black;
+        font-size: ToRem(26);
+        width: 54%;
+        height: 84%;
+        overflow-y: scroll;
+    }
+
+    &_header{
+        display: flex;
+        @include Size(100%, 314px);
+        &_img{
+            width: 65%;
+            img{
+                @include Size(100%, 100%);
+                object-fit: cover;
+                object-position: 0 -140px;
+            }
+        }
+        &_title{
+            width: 35%;
+            background-color: #E30090;
+            color: $mainLightColor;
+            font-size: ToRem(21);
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+
+            &:before {
+
+                content: "10.07";
+                display: block;
+
+                background-color: white;
+                color: hsl(322, 100%, 45%);
+                font-size: ToRem(39);
+                font-weight: 500;
+                border: 4px hsl(322, 100%, 45%) solid;
+                border-radius: 50%;
+
+                @include Size(138px, 138px);
+                position: absolute;
+                left: -69px;
+                z-index: 10003;
+
+                display: flex;
+                @include FlexCenter();
+            }
+
+            h2{
+                text-align: center;
+                width: calc(100% - 69px);
+            }
+        }
+        
+    }
+
+    &_content{
+
+        &_title{
+            width: 100%;
+            padding: 62px 50px 0;
+            text-align: right;
+            color: hsl(322, 100%, 45%);
+            font-family: $titleFont;
+            font-weight: 600;
+            font-size: ToRem(50);
+            
+            &:after{
+                content: "";
+                display: block;
+
+                @include Size(100%, 3px);
+                background-color: hsl(322, 100%, 45%);
+                margin-top: 12px;
+            }
+        }
+
+        &_text{
+            width: 100%;
+            padding: 40px 50px;
+        }
+
+        &_video{
+            @include Size(100%, 483px);
+            iframe{
+                @include Size(100%, 100%);
+            }
+        }
+
+        &_gallery{
+
+            height: 625px;
+
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "item-1 item-2"
+                                 "item-3 item-3";
+            
+            &_item{
+                position: relative;
+                overflow: hidden;
+                img{
+                    @include Size(100%, 100%);
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                &:nth-child(1){
+                    grid-area: item-1;
+                }
+                &:nth-child(2){
+                    grid-area: item-2;
+                }
+                &:nth-child(3){
+                    grid-area: item-3;
+                }
+            }
+            
+        }
+
+    }
+
+    &_footer{
+        padding: 80px 50px 40px;
+        position: relative;
+
+        display: flex;
+        justify-content: flex-end;
+
+        &_share{
+            display: flex;
+            &_text{
+                padding-right: 30px;
+            }
+        }
+
+        &:before{
+            content: "";
+            display: block;
+
+            @include Size(calc(100% - 100px), 3px);
+            background-color: hsl(322, 100%, 45%);
+
+            position: absolute;
+            top: 40px;
+        }
+    }
+}
+
+.popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup_close{
+    @include Size(54px,54px);
+    background-color: hsla(0,0,0,.5);
+    
+    position: fixed;
+    z-index: 100001;
+    left: 77%;
+
+    display: flex;
+    @include FlexCenter();
+}
+
+

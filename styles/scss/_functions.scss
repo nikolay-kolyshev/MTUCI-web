@@ -1,0 +1,7 @@
+@function ToRem($px){
+    @return $px * 0.0625rem;
+}
+
+@function CalcOffsetImg($direction, $gap, $offset, $now){
+    @return calc((#{$direction} * (100 / #{$now} * 100%) * (#{$offset} / 100)) - #{$gap});
+}

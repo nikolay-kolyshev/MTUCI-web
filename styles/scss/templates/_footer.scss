@@ -1,0 +1,233 @@
+.main_footer{
+
+    background-color: $mainColor;
+    position: relative;
+    height: 567px;
+    color: $mainLightColor;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer_info{
+        // background-color: rgba(255, 0, 0, 0.137);
+        width: calc(100% / 3);
+        display: flex;
+        flex-direction: column;
+        @include FlexCenter();
+        text-align: center;
+        padding: 0 100px;
+
+        &_suptitle{
+            width: 100%;
+            font-size: ToRem(16);
+            padding: 0 40px;
+
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &_title{
+            font-size: ToRem(110);
+            text-transform: uppercase;
+        }
+
+        &_subtitle{
+            font-size: ToRem(30);
+        }
+    }
+
+    .footer_social{
+        width: calc(100% / 3);
+        height: 100%;
+        padding: 70px 100px;
+        position: relative;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        &:before{
+            content: "";
+            display: block;
+
+            background-color: $backDarkColor;
+            border-radius: 3px;
+            @include Size(3px, 60%);
+            position: absolute;
+            left: -1.5px;
+            top: 20%;
+        }
+
+        &:after{
+            content: "";
+            display: block;
+
+            background-color: $backDarkColor;
+            border-radius: 3px;
+            @include Size(3px, 60%);
+            position: absolute;
+            right: -1.5px;
+            top: 20%;
+        }
+
+        &_title{
+            font-family: $titleFont;
+            font-size: ToRem(36);
+            text-align: center;
+        }
+
+        &_icons{
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "instagram twiiter"
+                                 "vk youtube";
+            gap: 15px;
+
+            &_item{
+                display: flex;
+                @include FlexCenter();
+            }
+
+            &_instagram{
+                grid-area: instagram;
+            }
+            &_twitter{
+                grid-area: twitter;
+            }
+            &_vk{
+                grid-area: vk;
+            }
+            &_youtube{
+                grid-area: youtube;
+            }
+
+        }
+
+        &_year{
+            font-size: ToRem(26);
+            color: $backDarkColor;
+        }
+    }
+
+    .footer_connect{
+        width: calc(100% / 3);
+        height: 100%;
+        padding: 70px 0 70px 100px;    
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+        &_title{
+            font-family: $titleFont;
+            font-size: ToRem(36);
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        &_form{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            @include Size(100%, 100%);
+            font-size: ToRem(25);
+            
+            &_input{
+                padding: 33px 0 33px 30px;
+                background-color: #280050;
+                color: $backColor;
+                width: 100%;
+                transition: background-color ease .4s,
+                            color ease .4s;
+                &::placeholder{
+                    color: $backDarkColor;
+                }
+                &:focus{
+                    outline: none;
+                    background-color: $backDarkColor;
+                    color: $mainColor;
+                    &::placeholder{
+                        color: $mainColor;
+                    }
+                }
+            }
+            &_input.error{
+                background-color: rgb(97, 25, 25);
+                color: $mainLightColor;
+                &::placeholder{
+                    color: $mainLightColor;
+                }
+            }
+            &_input.success{
+                background-color: rgb(34, 109, 68);
+                color: $mainLightColor;
+                &::placeholder{
+                    color: $mainLightColor;
+                }
+            }
+
+            &_mail{
+                margin-bottom: 11px;
+                border: none;
+                &_outer{
+                    width: 100%;
+                }
+                &_error{
+                    color: rgb(231, 100, 100);
+                    padding-left: 3px;
+                    margin-bottom: 11px;
+                }
+            }
+
+            &_textarea{
+                resize: none;
+                min-height: 100%;
+                max-height: 100%;
+                min-width: 100%;
+                max-width: 100%;
+                border: none;
+                &_outer{
+                    width: 100%;
+                    height: 100%;
+                }
+                &_error{
+                    color: rgb(231, 100, 100);
+                    padding-left: 3px;
+                    margin-top: 3px;
+                }
+            }
+
+            &_button{
+
+                @include Size(64px, 64px);
+
+                position: absolute;
+                bottom: -32px;
+                right: 32px;
+                background-color: $backColor;
+                border-radius: 50%;
+                transition: transform ease .4s;
+                cursor: pointer;
+
+                display: flex;
+                @include FlexCenter();
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+
+                img{
+                    padding-right: 3px;
+                }
+
+            }
+        }
+
+    }
+
+}

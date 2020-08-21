@@ -1,0 +1,112 @@
+.section_events{
+
+    position: relative;
+    font-size: ToRem(23);
+    padding: 70px 0;
+
+    .sections_header{
+        top: -50px;
+        &_icon{
+            left: -148px;
+        }
+    }
+
+    .events_inner{
+
+        display: flex;
+        justify-content: center;
+        height: 850px;
+
+        .events_calendar{
+
+            background-color: $backColor;
+            width: 40%;
+
+        } // .events_calendar
+
+        .events_info{
+            width: 60%;
+
+            display: flex;
+            flex-direction: column;
+
+            &_img{
+                height: 344px;
+                position: relative;
+
+                background-color: red;
+
+                &_visual{
+                    @include Size(100%,100%);
+                    object-fit: cover;
+                    position: relative;
+                }
+
+                &_decorate{
+
+                    @include Size(200px, 200px);
+                    border-radius: 50%;
+                    background-color: $mainLightColor;
+
+                    position: relative;
+                    bottom: 100px;
+                    left: 100px;
+
+                    img{
+                        position: relative;
+                        @include Size(140%, 140%);
+                        left: -20%;
+                        top: 10%;
+                    }
+                }
+
+                &:after{
+                    content: "";
+                    display: block;
+
+                    @include Size(100%,100%);
+                    // background-color: hsla(270, 100%, 20%, 0.22);
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &_description{
+
+                flex-grow: 1;
+                padding: 0 64px 0 192px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                text-align: right;
+
+                &_title{
+                    font-family: $titleFont;
+                    font-size: ToRem(50);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                &_subtitle{
+                    font-family: $titleFont;
+                    font-size: ToRem(35);
+                    font-weight: 700;
+                    color: $backColor;
+                }
+    
+                &_text{
+                    margin-top: 20px;
+                }
+
+            } // &_description
+
+        } // .events_info
+
+    } // .events_inner
+
+    
+
+}

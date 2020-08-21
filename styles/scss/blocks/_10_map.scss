@@ -1,0 +1,218 @@
+.section_map{
+
+    background-color: $backColor;
+    padding: 105px 0;
+    position: relative;
+
+    .sections_header{
+        &_icon{
+            left: -146px;
+        }
+    }
+
+    .wrapper_one_screen{
+        background-color: $mainLightColor;
+        height: 867px;
+    }
+
+
+    .map_inner{
+
+        display: flex;
+        justify-content: space-between;
+
+        @include Size(100%, 100%);
+
+        .map_main{
+            width: calc(100% / 3);
+        }
+
+        .map_info{
+            width: calc(100% / 3);
+            position: relative;
+        }
+
+
+        .map_info_inner{
+
+            display: none;
+            @include Size(100%, 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &_image{
+
+                @include Size(100%,100%);
+
+                img{
+                    @include Size(100%,100%);
+                    object-fit: cover;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+            &_description{
+                
+                @include Size(100%,100%);
+                font-size: ToRem(24);
+                color: $mainLightColor;
+                padding: 41px 60px 41px 41px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 10000;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &_title{
+                    font-family: $titleFont;
+                    font-size: ToRem(57);
+                    font-weight: 600;
+                    text-align: right;
+                    text-transform: uppercase;
+                    padding-bottom: 68px;
+                }
+
+                & > div{
+                    padding: 15px 0;
+                }
+
+                h4{
+                    font-family: $titleFont;
+                    font-size: ToRem(38);
+                    font-weight: 600;
+                }
+                
+                address{
+                    font-style: normal;
+                }
+
+            }
+
+            &:after{
+                content: "";
+                display: block;
+
+                @include Size(100%,100%);
+                background-color: hsla(270, 100%, 20%, 0.6);
+
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+        }
+
+        .map_info_active{
+            display: block;
+        }
+        
+        .map_nav{
+
+            width: calc(100% / 3);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            &_item{
+                @include Size(110%, 300px);
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                font-family: $titleFont;
+                font-weight: 600;
+                color: $mainLightColor;
+                padding: 35px;
+                cursor: pointer;
+
+                position: relative;
+                overflow: hidden;
+                display: flex;
+
+                &:hover{
+                    .map_nav_item_title{
+                        color: $mainColor;
+                    }
+
+                    &:before{
+                        transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,120%,0);
+                    }
+
+                    &:after{
+                        background-color: hsla(270, 58%, 78%, 0.473);
+                    }
+                }
+
+                &_title{
+                    position: relative;
+                    z-index: 10000;
+                    width: 100%;
+
+                    transition: color ease .8s;
+                        
+                    &_sup{
+                        font-size: ToRem(33);
+                    }
+
+                    &_sub{
+                        font-size: ToRem(83);
+                    }
+
+                }
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    @include Size(100%,100%);
+                    background: rgba(255, 255, 255, 0.5);
+                    content: '';
+                    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-120%,0);
+                    transition: transform ease .7s;
+                }
+
+                &:after{
+                    content: "";
+                    display: block;
+
+                    background-color: hsla(270, 58%, 78%, 0.692);
+                    @include Size(100%, 100%);
+                    transition: background-color ease .8s;
+
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+            }
+
+            &_second{
+                background: url(../../../images/photos/map/secondery_building.jpg);
+                left: 0;
+
+                .map_nav_item_title{
+                    align-self: flex-start;
+                    text-align: left;
+                }
+            }
+
+            &_main{
+                background-image: url(../../../images/photos/map/main_building.jpg);
+                left: -10%;
+                margin-top: 40px;
+                .map_nav_item_title{
+                    align-self: flex-end;
+                    text-align: right;
+                }
+            }
+
+        }
+
+    }
+
+}

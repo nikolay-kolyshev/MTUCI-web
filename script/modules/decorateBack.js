@@ -3,23 +3,17 @@ export default function decorateBackInit(particlesId) {
     particlesJS(particlesId, {
         particles: {
           number: {
-            value: 50,
+            value: 40,
             density: { enable: true, value_area: 789.1850086415761 }
           },
           color: { value: "#ffffff" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#ffffff" },
-            polygon: { nb_sides: 6 },
-            image: { src: "img/github.svg", width: 100, height: 100 }
-          },
           opacity: {
-            value: 0.5528314585136049,
+            value: 0.5,
             random: true,
             anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false }
           },
           size: {
-            value: 5,
+            value: 6,
             random: false,
             anim: { enable: false, speed: 0, size_min: 0, sync: true }
           },
@@ -44,9 +38,9 @@ export default function decorateBackInit(particlesId) {
         interactivity: {
           detect_on: "canvas",
           events: {
-            onhover: { enable: true, mode: "repulse" },
-            onclick: { enable: true, mode: "push" },
-            resize: true
+            onhover: { enable: false, mode: "repulse" },
+            onclick: { enable: false, mode: "push" },
+            resize: false
           },
           modes: {
             grab: { distance: 400, line_linked: { opacity: 1 } },

@@ -1,14 +1,19 @@
 // Переменные
 @import "_variables.scss";
+//Функции
+@import "_functions.scss";
 // Миксикны
 @import "_mixins.scss";
 
 // Шаблоны
-@import "templates/_hamburger.scss";
 @import "templates/_grid.scss";
 @import "templates/_header.scss";
+@import "templates/_footer.scss";
 @import "templates/_sections_header.scss";
+@import "templates/_hamburger.scss";
 @import "templates/_slider.scss";
+@import "templates/_sections_seperators.scss";
+@import "templates/_popup.scss";
 
 // Блоки на первой странице (лендинге)
 @import "blocks/_01_intro.scss";
@@ -17,15 +22,26 @@
 @import "blocks/_04_news.scss" ;
 @import "blocks/_05_partners.scss";
 @import "blocks/_06_social.scss";
+@import "blocks/_07_sport.scss";
+@import "blocks/_08_events.scss";
+@import "blocks/_09_creation.scss";
+@import "blocks/_10_map.scss";
 
 html{
     font-family: $mainFont;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 100%;
+    color: $mainColor;
+}
+
+body.lock{
+    overflow: hidden;
 }
 
 .main_content{
     margin-top: -165px;
+    overflow: hidden;
+    position: relative;
 }
 
 .particles_inner{

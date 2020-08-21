@@ -2,161 +2,211 @@
 .section_partners{
     
     position: relative;
-     //background-color: rgb(195, 63, 63);
-    //background-color: rgb(177, 177, 177);
+    overflow: hidden;
+    background: $backDarkColor;
+    padding: 400px 0 150px;
+    font-size: ToRem(26);
+
+    &:before{
+        content: "";
+        display: block;
+        @include Size (110%, 400px);
+        background-color: $mainLightColor;
+        position: absolute;
+        top: -200px;
+        left: -5%;
+        transform: rotate(3deg);
+    }
+    
     .partners_inner{
         position: relative;
         z-index: 1000;
+        padding-top: 200px;
     }
-    background: $backDarkColor;
-    .Partners_Field_Wrapper{
-        //background-color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-top: 500px
-        ;
-    }
-    .Partners_Field{
-        width: 1336px ;
-        height: 1356px;
-       display: grid;
-       grid-template-areas:"ContainerKaspersky" "ContainerNokia" "ContainerHuawei";
-       grid-template-rows: 1fr 1fr 1fr;
-        .Container_Kaspersky{
-            display: grid;
-            grid-template-areas:"KasperskyLogo KasperskyDescription" ;
-            grid-template-columns: 1fr 1fr;
-            grid-area: ContainerKaspersky;
-            
-            .Kaspersky_Logo{
-                grid-area: KasperskyLogo;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #007461;
-            }
-            .Kaspersky_Description{
-                grid-area: KasperskyDescription;
-                .KasperskyWrapper{
-                    margin-left: 50px;
-                }
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                .Kaspersky_Name{
-                    color: #007461;
-                    font-size: 50px;
-                    // margin-bottom: 10px;
-                }
-                .Kaspersky_Information{
-                    color:#003C32;
-                    font-size: 32px;
-                    // margin-bottom: 10px;
-                }
-                .Kaspersky_Information_Button{
-                    color: #007461;
-                    font-size: 23px;
-                    width: 100px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: solid 4px #007461;
-                }
-            }
+
+    .sections_header{
+        top: 0;
+        &_icon{
+            right: -169px;
         }
-        .Container_Nokia{
-            display: grid;
-            grid-template-areas:" NokiaDescription NokiaLogo" ;
-            grid-template-columns: 1fr 1fr;
-            grid-area: ContainerNokia;
-            .Nokia_Logo{
-                grid-area: NokiaLogo;
-                order: 2;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #ffffff;
+    }
+
+    .partners_info{
+
+        &_item{
+            
+            height: 457px;  
+            display: flex;
+            justify-content: space-between;
+
+            &:hover{
+
+                .partners_info_item_logo{
+                    transform: skew(0, -1deg) scale(0.98);
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
+
             }
             
-            .Nokia_Description{
-                .NokiaWrapper{
-                    margin-right: 50px;
+            &_logo{
+                width: 50%;
+                letter-spacing: 100px;
+                transition: transform ease .4s;
+
+                display: flex;
+                @include FlexCenter();
+
+                img{
+                    transition: transform ease .4s;
+                }
+            }
+
+            &_description{
+                width: 50%;
+                padding: 0 64px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                &_title{
+                    font-family: $titleFont;
+                    font-size: ToRem(50);
+                    font-weight: 700;
+                }
+
+                &_text{
+                    margin: 20px 0 30px;
+                }
+
+                &_button{
+                    font-family: $titleFont;
+                    font-weight: 500;
+                    border: solid black 3px;
+                    align-self: flex-start;
+                    padding: 12px 27px;
+
+                    position: relative;
+                    z-index: 1001;
+                    overflow: hidden;
+                
+                    transition: color ease 0.4s;
+
+                    span{
+                        position: absolute;
+                        display: block;
+                        @include Size(0,0);
+                        border-radius: 50%;
+                        transition: width ease 0.45s, height ease 0.45s;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                    }
+                
+                    &:hover{
+                        color: $mainLightColor;
+                    }
+                
+                    &:hover span{
+                        width: 225%;
+                        height: 800%;
+                    }
+                
+                    &:active{
+                        background-color: $mainLightColor;
+                    }
+                }
+            }
+
+            &:nth-child(1){
+                &:hover{
+                    .partners_info_item_description{
+                        color: #007461;
+    
+                        &_text{
+                            color: darken(#007461, 15);
+                        }
+    
+                        &_button{
+                            border-color: #007461;
+                            span{
+                                background-color: #007461;
+                            }
+                        }
+                    }
+                }
+                .partners_info_item_logo{
+                    background-color: #007461;
+                }
+                .partners_info_item_description{
+                    color: #007461;
+
+                    &_text{
+                        color: darken(#007461, 15);
+                    }
+
+                    &_button{
+                        border-color: #007461;
+                        span{
+                            background-color: #007461;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2){
+
+                &:hover .partners_info_item_logo{
+                    transform: skew(0, 1deg) scale(0.98);
+                }
+
+                .partners_info_item_logo{
+                    background-color: white;
+                    order: 1;
+                }
+                .partners_info_item_description{
                     text-align: right;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-end;
-                }
-                grid-area: NokiaDescription;
-                order: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .Nokia_Name{
                     color: #1C4598;
-                    font-size: 50px;
-                    // margin-bottom: 10px;
-                }
-                .Nokia_Information{
-                    
-                    color:#0A1D43;
-                    font-size: 32px;
-                    // margin-bottom: 10px;
-                }
-                .Nokia_Information_Button{
-                    color:#1C4598;
-                    font-size: 23px;
-                    width: 100px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: solid 4px #1C4598;
+
+                    &_text{
+                        color: darken(#1C4598, 15);
+                    }
+
+                    &_button{
+                        align-self: flex-end;
+                        border-color: #1C4598;
+                        span{
+                            background-color: #1C4598;
+                        }
+                    }
                 }
             }
-        }
-        .Container_Huawei{
-            display: grid;
-            grid-template-areas:"HuaweiLogo HuaweiDescription" ;
-            grid-template-columns: 1fr 1fr;
-            grid-area: ContainerHuawei;
-            .Huawei_Logo{
-                grid-area: HuaweiLogo;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #E12229;
-            }
-            .Huawei_Description{
-                .HuaweiWrapper{
-                    margin-left: 50px;
+            &:nth-child(3){
+                .partners_info_item_logo{
+                    background-color: #E12229;
                 }
-                grid-area: HuaweiDescription;
-                // margin-left: 50px;
-                // margin-bottom: 25px;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                .Huawei_Name{
+                .partners_info_item_description{
                     color: #E12229;
-                    font-size: 50px;
-                    margin-bottom: 10px;
-                }
-                .Huawei_Information{
-                    color:#7A1014;
-                    font-size: 32px;
-                    margin-bottom: 10px;
-                }
-                .Huawei_Information_Button{
-                    color: #E12229;
-                    font-size: 23px;
-                    width: 100px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: solid 4px #E12229;
+
+                    &_text{
+                        color: darken(#E12229, 15);
+                    }
+
+                    &_button{
+                        border-color: #E12229;
+                        span{
+                            background-color: #E12229;
+                        }
+                    }
                 }
             }
+
         }
+
     }
+
+    .link_more {
+        padding: 108px 0 8px;
+    }
+    
 }

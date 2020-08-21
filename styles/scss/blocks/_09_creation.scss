@@ -1,0 +1,190 @@
+.section_creation{
+
+    position: relative;
+    overflow: hidden;
+    background: $backDarkColor;
+    padding: 400px 0 150px;
+    font-size: ToRem(26);
+
+    &:before{
+        content: "";
+        display: block;
+        @include Size (110%, 400px);
+        background-color: $mainLightColor;
+        position: absolute;
+        top: -200px;
+        left: -5%;
+        transform: rotate(3deg);
+    }
+
+    .creation_inner{
+        position: relative;
+        z-index: 1000;
+        padding-top: 200px;
+    }
+
+    .sections_header{
+        top: 0;
+        &_icon{
+            right: -148px;
+        }
+    }
+
+    .creation_gallery{
+
+        height: 1600px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: "debut mrmsmtuci"
+                             "kinograd kinograd";
+
+        &:hover{
+            .creation_gallery_item{
+                filter: blur(10px);
+            }
+        }
+
+        &_block{
+            &:hover{
+                .creation_gallery_item{
+                    filter: blur(0px);
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+       &_item_main{
+            grid-area: item-main;
+            background-color: $backColor;
+            position: relative;
+            overflow: hidden;
+            transition: background-color ease .4s;
+
+            a{
+                @include Size(100%, 100%);
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            h3{
+                font-family: $titleFont;
+                text-transform: uppercase;
+                font-size: ToRem(50);
+                text-align: right;
+                padding: 38px 38px 0;
+                z-index: 1000;
+            }
+            
+            svg{
+                height: 70%;
+                position: absolute;
+                bottom: -60px;
+                left: -20px;
+                transition: transform ease .4s;
+            }
+            
+            &:hover{
+                background-color: $mainLightColor;
+                svg{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &_item{
+            position: relative;
+            overflow: hidden;
+            transition: filter ease .4s;
+
+            img{
+                @include Size(100%, 100%);
+                object-fit: cover;
+                position: absolute;
+                transition: transform ease .4s;
+            }
+            
+        }
+
+        &_debut{
+
+            grid-area: debut;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "item-1 item-1"
+                                 "item-2 item-main";
+
+            &_item_main{
+                h3{
+                    text-align: left;
+                }
+                svg{
+                    left: auto;
+                    right: -40px;
+                }
+                
+            }
+
+            &_item{
+                &:nth-child(1){
+                    grid-area: item-1;
+                }
+                &:nth-child(2){
+                    grid-area: item-2;
+                }
+                
+            }
+        }
+
+        &_mrmsmtuci{
+
+            grid-area: mrmsmtuci;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: "item-1 item-main"
+                                 "item-1 item-2";
+
+            &_item{
+                &:nth-child(1){
+                    grid-area: item-1;
+                }
+                &:nth-child(2){
+                    grid-area: item-2;
+                }
+            }
+        }
+
+        &_kinograd{
+
+            grid-area: kinograd;
+
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            grid-template-rows: 100%;
+            grid-template-areas: "item-1 item-main";
+
+            &_item{
+                &:nth-child(1){
+                    grid-area: item-1;
+                }
+            }
+        }
+
+    }
+
+    .link_more {
+        padding-top: 108px;
+    }
+
+}

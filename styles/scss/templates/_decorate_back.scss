@@ -1,0 +1,12 @@
+.particles_inner{
+
+    @include Size(100%,100%);
+     position: absolute;
+     top: 0;
+     z-index: 0;
+
+     canvas{
+         display: block;
+     }
+
+ }

@@ -4,7 +4,7 @@
 
     background-color: $backColor;
     padding: 105px 0;
-    font-size: 2.4rem;
+    font-size: ToRem(24);
     position: relative;
     z-index: 100;
 
@@ -16,6 +16,12 @@
         position: absolute;
         z-index: -1;
         top: 0;
+    }
+
+    .sections_header{
+        &_icon{
+            left: -127  px;
+        }
     }
 
     .wrapper_one_screen{
@@ -86,14 +92,14 @@
 
                 .percentage_value{
                     font-weight: 600;
-                    font-size: 9rem;
+                    font-size: ToRem(90);
                 }
 
                 .percentage_name{
                     text-align: center;
                     font-family: $titleFont;
                     font-weight: 400;
-                    font-size: 2.1rem;
+                    font-size: ToRem(21);
                     color: $mainColor;
                     text-transform: uppercase;
                 }
@@ -126,7 +132,7 @@
         
             color: $mainLightColor;
             font-family: $titleFont;
-            font-size: 3.3rem;
+            font-size: ToRem(33);
             text-transform: uppercase;
             background-color: $mainColor;
             position: relative;
@@ -221,12 +227,12 @@
 
             .navbar_title{
                 text-align: center;
-                font-size: 3rem;
+                font-size: ToRem(30);
                 padding-left: 30px;
                 transition: color ease 0.4s;
 
                 span{
-                    font-size: 1.95rem;
+                    font-size: ToRem(19.5);
                 }
             }
         }

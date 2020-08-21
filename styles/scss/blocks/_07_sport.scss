@@ -1,0 +1,215 @@
+.section_sport{
+
+    position: relative;
+    overflow: hidden;
+    background-color: $backDarkColor;
+    padding: 200px 0 450px;
+    font-size: ToRem(23);
+    
+    &:after {
+        content: "";
+        display: block;
+        @include Size (110%, 400px);
+        background-color: $mainLightColor;
+        position: absolute;
+        bottom: -200px;
+        left: -5%;
+        transform: rotate(-3deg);
+    }
+
+    .sport_inner{
+        position: relative;
+        z-index: 1000;
+        padding-top: 200px;
+    }
+
+    .sections_header{
+        top: 0;
+        &_icon{
+            right: -149px;
+        }
+    }
+
+    .sport_gallery{
+
+        height: 890px;
+        cursor: pointer;
+        align-items: center;
+        margin-bottom: 108px;
+
+        display: flex;
+        justify-content: space-between;
+
+        &_item{
+
+            position: relative;
+            @include Size(calc(100% / #{$sportNumbGallery}), 90%);
+            
+            margin: 0 16px;
+            filter: grayscale(1);
+            opacity: 0.5;
+            transition: width ease .6s,
+                        filter ease .6s,
+                        opacity ease .6s;
+
+            &:hover{
+                width: calc(200% / #{$sportNumbGallery});
+                filter: grayscale(0);
+                opacity: 1;
+
+                &:after{
+                    background-color: transparent;
+                }
+            }
+
+            &_active{
+                filter: grayscale(0);
+                opacity: 1;
+
+                &:after{
+                    background-color: transparent;
+                }
+            }
+
+            img{
+                @include Size(100%,100%);
+                object-fit: cover;
+            }
+
+            &:nth-child(3n-2){
+                align-self: flex-start;
+            }
+
+            &:nth-child(3n){
+                align-self: flex-end;
+            }
+
+        }
+
+    }
+
+    .sport_info{
+
+        height: 800px;
+        display: flex;
+        
+        &_description{
+            width: 40%;
+            padding: 0 64px;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &_title{
+                font-family: $titleFont;
+                font-size: ToRem(50);
+                font-weight: 700;
+            }
+
+            &_text{
+                margin: 20px 0 30px;
+            }
+
+            &_button{
+
+                width: inherit;
+                padding: 15px 30px;
+            
+                color: $mainColor;
+                font-family: $titleFont;
+                font-size: ToRem(23);
+                font-weight: 500;
+                background-color: $backColor;
+                position: relative;
+                z-index: 1001;
+                overflow: hidden;
+            
+                transition: color ease 0.4s;
+
+                span{
+                    position: absolute;
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border-radius: 50%;
+                    background-color: $mainColor;
+                    transition: width ease 0.45s, height ease 0.45s;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                }
+            
+                &:hover{
+                    color: $mainLightColor;
+                }
+            
+                &:hover span{
+                    width: 225%;
+                    height: 800%;
+                }
+            
+                &:active{
+                    background-color: $mainLightColor;
+                }
+            } // &_button
+
+        } // &_description
+
+        &_img{
+            width: 60%;
+            height: 800px;
+
+            display: grid;
+            grid-template-columns: 60fr 40fr;
+            grid-template-rows: 3fr 32fr 62fr 3fr;
+            grid-template-areas: "item-1 ."
+                                 "item-1 item-2"
+                                 "item-3 item-2"
+                                 ". item-2";
+            gap: 23px;   
+
+            &_item{
+
+                overflow: hidden;
+                position: relative;
+
+                &_photo{
+                    z-index: 0;
+                    @include Size(calc(#{$oneScreenWidth} * 0.6), 800px);
+                    object-fit: cover;
+                    position: absolute;
+                }
+
+                &:nth-child(1){
+                    grid-area: item-1;
+                    .sport_info_img_item_photo{
+                        left: 0;
+                        top: 0;
+                    }
+                }
+                &:nth-child(2){
+                    grid-area: item-2;
+                    .sport_info_img_item_photo{
+                        top: CalcOffsetImg(-1, 23px, 3, 97);
+                        left: CalcOffsetImg(-1, 23px, 60, 40);
+                    }
+                }
+                &:nth-child(3){
+                    grid-area: item-3;
+                    .sport_info_img_item_photo{
+                        // opacity: .4;
+                        top: CalcOffsetImg(-1, 23px, 38, 62);
+                        left: 0;
+                    }
+                }
+
+            }
+
+        } // &_img        
+    }
+
+    .link_more {
+        padding-top: 108px;
+    }
+
+}

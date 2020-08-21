@@ -1,19 +1,14 @@
-
-
-
-
 .section_social{
 
     background-color: $backColor;
     padding: 105px 0;
+    font-size: ToRem(40);
     position: relative;
 
-    .sections_header
-    {
-    //    &_icon{
-    //         width: 105px;
-    //         right: -145px;
-    //     }
+    .sections_header{
+        &_icon{
+            left: -135px;
+        }
     }
 
     .wrapper_one_screen{
@@ -21,16 +16,36 @@
         height: 867px;
     }
 
+    .social_decorate {
+
+        div{
+            transition: background-color ease .6s;
+        }
+
+        &_human {
+            position: absolute;
+            top: -10%;
+            left: -128px;
+            z-index: 9999;
+        }
+
+        &_phone {
+            position: absolute;
+            left: 30px;
+            bottom: -10%;
+            z-index: 9999;
+        }
+    }
+
     .section_social_inner{
 
         display: flex;
-        font-size: 4rem;
         height: 100%;
 
         &_links{
-            font-size: 5.7rem;
-            width: 363px;
-            padding-right: 60px;
+            font-size: ToRem(57);
+            width: 20%;
+            padding-right: 20px;
             text-align: center;
             color: $backDarkColor;
 
@@ -38,8 +53,11 @@
             justify-content: flex-end;
             align-items: center;
 
-            &_active{
-                color: $mainColor;
+            a{
+                transition: color ease .4s;
+                &:hover{
+                    color: $mainColor;
+                }
             }
 
             &_wrapper{
@@ -79,72 +97,109 @@
             top: -27px;
             right: -27px;
         
-            height: calc(100% + 54px);
-            // height: 400px;
-
-            flex-grow: 1;
+            @include Size(80%, calc(100% + 54px));
+            
         
             display: grid;
-            grid-template-columns: 8fr 5fr 1fr 6fr;
-            grid-template-rows: 24% 10% 36% 24%;
-            grid-template-areas: "socialGallery1 socialGallery1 . ."
-                                 "socialGallery2 socialGallery3 socialGallery3 socialGallery3"
-                                 "socialGallery2 socialGallery4 socialGallery4 socialGallery5"
-                                 "socialGallery2 socialGallery6 socialGallery6 socialGallery6";
-
+            grid-template-columns: 4fr 2fr 1fr 3fr;
+            grid-template-rows: 12fr 5fr 18fr 12fr;
+            grid-template-areas: "item-1 item-1 . ."
+                                 "item-2 item-title item-title item-title"
+                                 "item-2 item-3 item-3 item-4"
+                                 "item-2 item-5 item-5 item-5";
             gap: 2%;
         
             &_item{
+
                 @include Size(100%, 100%);
+                position: relative;
+                display: flex;
+                @include FlexCenter();
+                cursor: pointer;
+
+                &_img{
+                    position: absolute;
+                    transform: scale(0);
+                    transition: transform ease .4s;
+                    z-index: 10000;
+                }
 
                 a{
+                    @include Size(100%, 100%);
+                    position: absolute;
                     img{
                         @include Size(100%,100%);
                         object-fit: cover;
-                        display: block;
-                    } 
+                        position: absolute;
+                    }
+                }
+
+                &:not(.section_social_inner_gallery_label):after{
+                    content: "";
+                    display: block;
+
+                    @include Size(100%,100%);
+                    background-color: hsla(270, 100%, 20%, 0.82);
+                    opacity: 0;
+                    transition: opacity ease .4s;
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+
+                &:hover:after{
+                    opacity: 1;
+                } 
+                &:hover .section_social_inner_gallery_item_img{
+                    transform: scale(1);
                 }
 
         
                 &:nth-child(1){
-                    grid-area: socialGallery1;
+                    grid-area: item-1;
                 }
                 &:nth-child(2){
-                    grid-area: socialGallery2;
+                    grid-area: item-2;
                 }
                 &:nth-child(3){
-                    grid-area: socialGallery3;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 32px;
-                    &:before{
-                        content: "";
-                        display: block;
-
-                        background-color: $mainColor;
-                        border-radius: 4px;
-        
-                        @include Size(159px, 4px);
-                    }
-                    &:after{
-                        content: "";
-                        display: block;
-
-                        background-color: $mainColor;
-                        border-radius: 4px;
-        
-                        @include Size(159px, 4px);
-                    }
+                    grid-area: item-title;
                 }
                 &:nth-child(4){
-                    grid-area: socialGallery4;
+                    grid-area: item-3;
                 }
                 &:nth-child(5){
-                    grid-area: socialGallery5;
+                    grid-area: item-4;
                 }
                 &:nth-child(6){
-                    grid-area: socialGallery6;
+                    grid-area: item-5;
+                }
+            }
+
+            &_label{
+                grid-area: item-title;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 32px;
+                &:before{
+                    content: "";
+                    display: block;
+
+                    background-color: $mainColor;
+                    border-radius: 4px;
+    
+                    @include Size(159px, 4px);
+                }
+                &:after{
+                    content: "";
+                    display: block;
+
+                    background-color: $mainColor;
+                    border-radius: 4px;
+    
+                    @include Size(159px, 4px);
                 }
             }
             

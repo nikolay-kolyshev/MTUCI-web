@@ -1,0 +1,64 @@
+.sections_seperators{
+
+    &_top{
+        position: absolute;
+        top: -325px;
+        font-size: ToRem(50);
+        font-family: $titleFont;
+        text-transform: uppercase;
+        font-weight: 700;
+        z-index: 10004;
+
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        &_slogan_left{
+            align-self: flex-start;
+            color: $mainLightColor;
+            margin-right: 40px;
+        }
+
+        &_img img{
+            height: 200px;
+        }
+
+        &_slogan_right{
+            align-self: flex-end;
+            color: $backDarkColor;
+            margin-left: 40px;
+        }
+    }
+
+    &_bottom{
+        position: absolute;
+        bottom: -325px;
+        font-size: ToRem(50);
+        font-family: $titleFont;
+        text-transform: uppercase;
+        font-weight: 700;
+        z-index: 10004;
+
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+        &_slogan_left{
+            align-self: flex-end;
+            color: $mainLightColor;
+            margin-right: 40px;
+        }
+
+        &_img img{
+            height: 200px;
+        }
+
+        &_slogan_right{
+            align-self: flex-start;
+            color: $backDarkColor;
+            margin-left: 40px;  
+        }
+    }
+}

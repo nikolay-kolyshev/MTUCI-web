@@ -5,7 +5,7 @@
     color: $mainLightColor;
     height: 100vh;
     font-family: $titleFont;
-    font-size: 3rem;
+    font-size: ToRem(30);
     color: $mainLightColor;
     background-color: $mainColor;
 
@@ -25,7 +25,7 @@
 
    h1{
         display: inline-block;
-        font-size: 13.2rem;
+        font-size: ToRem(132);
         font-weight: 300;
         position: relative;
         span{
@@ -45,7 +45,7 @@
         }
     }
     h2{
-        font-size: 5.1rem;
+        font-size: ToRem(51);
         font-weight: 400;
         color: $backDarkColor;
     }
