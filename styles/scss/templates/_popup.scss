@@ -1,17 +1,21 @@
 .popup{
     background-color: rgba(51, 0, 102, 0.877);
     backdrop-filter: grayscale(10);
+    
     @include Size(100%,100%);
     display: flex;
     @include FlexCenter();
 
     opacity: 0;
     visibility: hidden;
+    transition: visibility ease .6s, opacity ease .6s  ;
+    
 
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100000;
+    perspective: 1000px;  
 
     &_body{
         background-color: $backColor;
@@ -20,6 +24,9 @@
         width: 54%;
         height: 84%;
         overflow-y: scroll;
+        transform-style: perspective ;
+        transform:  rotateX(-35deg) translateY(100%)  ;
+        transition: transform ease .6s, opacity ease .6s, visibility ease .6s ;
     }
 
     &_header{
@@ -169,20 +176,34 @@
 }
 
 .popup.open{
-    opacity: 1;
+    opacity:1;
     visibility: visible;
+    .popup_body{
+        transform: rotateX(0) translateY(0) ;
+        
+    }
+    
 }
 
-.popup_close{
+.popup_close{   
     @include Size(54px,54px);
     background-color: hsla(0,0,0,.5);
+    cursor: pointer;
     
     position: fixed;
-    z-index: 100001;
-    left: 77%;
+  
+    left: 100%;
 
     display: flex;
     @include FlexCenter();
+
+    img{
+        transition: transform ease .4s ;
+    
+        &:hover {
+            transform: rotate(90deg)  ;
+        }
+    }
 }
 
 

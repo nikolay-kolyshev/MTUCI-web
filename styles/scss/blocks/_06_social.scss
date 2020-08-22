@@ -117,46 +117,49 @@
                 @include FlexCenter();
                 cursor: pointer;
 
-                &_img{
-                    position: absolute;
-                    transform: scale(0);
-                    transition: transform ease .4s;
-                    z-index: 10000;
-                }
-
                 a{
                     @include Size(100%, 100%);
                     position: absolute;
-                    img{
+                   
+                    display: flex;
+                    @include FlexCenter();
+                    
+                    .icon{
+                        position: absolute;
+                        transform: scale(0);
+                        transition: transform ease .4s;
+                        z-index: 10000;
+                       
+                    }
+
+                    &:after{
+                        content: "";
+                        display: block;
+    
+                        @include Size(100%,100%);
+                        background-color: hsla(270, 100%, 20%, 0.82);
+                        opacity: 0;
+                        transition: opacity ease .4s;
+    
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &:hover:after{
+                        opacity: 1;
+                    } 
+                    &:hover .icon{
+                        transform: scale(1);
+                    }
+
+                    .image{
                         @include Size(100%,100%);
                         object-fit: cover;
                         position: absolute;
                     }
                 }
 
-                &:not(.section_social_inner_gallery_label):after{
-                    content: "";
-                    display: block;
-
-                    @include Size(100%,100%);
-                    background-color: hsla(270, 100%, 20%, 0.82);
-                    opacity: 0;
-                    transition: opacity ease .4s;
-
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                }
-
-
-                &:hover:after{
-                    opacity: 1;
-                } 
-                &:hover .section_social_inner_gallery_item_img{
-                    transform: scale(1);
-                }
-
-        
                 &:nth-child(1){
                     grid-area: item-1;
                 }

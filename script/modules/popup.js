@@ -3,7 +3,7 @@ export default function PopupInit(){
     const popupOpenLinks = document.querySelectorAll(".popup_link");
     const popupCloseLinks = document.querySelectorAll(".popup_close");
     
-    const timeout = 0;
+    const timeout = 600;
     let unlock = true;
 
     function bodyLock(){

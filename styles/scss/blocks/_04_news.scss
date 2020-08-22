@@ -112,10 +112,19 @@
                     text-transform: lowercase;
                     letter-spacing: 9px;
                     @include Size(100%, 60px);
+                    transition: height ease .4s;    
+                    
+                    &:hover {
+                        height: 90px;
+                    }
 
-                    display: flex;
-                    @include FlexCenter();
-                    text-align: center;
+                    
+                    a{
+                        @include Size (100%,100%);
+                        display: flex;
+                        @include FlexCenter();
+                        text-align: center;
+                    }
                 }
             }
 

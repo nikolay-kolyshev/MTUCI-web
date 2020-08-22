@@ -4,38 +4,44 @@ export default function instagramPostsInit() {
     instagramParser.getMediaByUsername('mtuci.live').then(function (response) {
 
         // Get photos
-        var photos = response.profile.edge_owner_to_timeline_media.edges;
-        var items = [];
+        let photos = response.profile.edge_owner_to_timeline_media.edges;
+        let items = [];
 
         let index = 0;
 
-        for (var i = 0; i <= 4; i++) {
+        for (let i = 0; i <= 4; i++) {
 
             if (index == 2)
                 index++;
 
-            var current = photos[i].node;
+            let current = photos[i].node;
 
-            var div = document.querySelectorAll(".section_social_inner_gallery_item")[index];
-            var link = document.createElement('a');
-            var img = document.createElement('img');
+            let div = document.querySelectorAll(".section_social_inner_gallery_item")[index];
+            let link = document.createElement('a');
+            let img = document.createElement('img');
+            let icon = document.createElement('img');
 
-            var thumbnail = current.thumbnail_resources[4];
-            var imgSrc = thumbnail.src;
-            var imgAlt = current.accessibility_caption;
+            let thumbnail = current.thumbnail_resources[4];
+            let imgSrc = thumbnail.src;
+            let imgAlt = current.accessibility_caption;
 
-            var shortcode = current.shortcode;
-            var linkHref = 'https://www.instagram.com/p/' + shortcode;
+            let shortcode = current.shortcode;
+            let linkHref = 'https://www.instagram.com/p/' + shortcode;
 
             div.classList.add();
 
             img.src = imgSrc;
+            img.className = "image";
             img.alt = imgAlt;
+
+            icon.src = "images/svg/social/search.svg";
+            icon.className =  "icon";
 
             link.href = linkHref;
             link.target = '_blank';
 
             link.appendChild(img);
+            link.appendChild(icon);
             div.appendChild(link);
 
             items.push(div);

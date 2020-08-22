@@ -8,7 +8,7 @@
     font-size: ToRem(30);
     color: $mainLightColor;
     background-color: $mainColor;
-
+    position: relative;
     overflow: hidden;
 
     display: flex;
@@ -62,12 +62,17 @@
     color: $mainLightColor;
 }
 
+.intro_university_image {
 
-#univesity_image{
-    height: 38vw;
     position: absolute;
     bottom: 0;
     right: 0;
+    height: 38vw;
+}
+
+#univesity_image{
+    height: 100%;
+   
     *{
         transition: fill-opacity ease 3s;
     }

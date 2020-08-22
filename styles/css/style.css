@@ -260,7 +260,7 @@
 
 .main_header .nav_pages_sticky a:after {
   background-color: #330066;
-  bottom: -42px;
+  bottom: -47 px;
   height: 5px;
 }
 
@@ -388,7 +388,7 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "instagram twiiter" "vk youtube";
+      grid-template-areas: "instagram twiiter" "vk youtube";
   gap: 15px;
 }
 
@@ -476,8 +476,8 @@
   background-color: #280050;
   color: #E5E0EB;
   width: 100%;
-  -webkit-transition: background-color ease .4s, color ease .4s;
-  transition: background-color ease .4s, color ease .4s;
+  -webkit-transition: background-color ease .4s, color ease .4s;
+  transition: background-color ease .4s, color ease .4s;
 }
 
 .main_footer .footer_connect_form_input::-webkit-input-placeholder {
@@ -1210,10 +1210,14 @@
           align-items: center;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: visibility ease .6s, opacity ease .6s;
+  transition: visibility ease .6s, opacity ease .6s;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100000;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
 .popup_body {
@@ -1223,6 +1227,14 @@
   width: 54%;
   height: 84%;
   overflow-y: scroll;
+  -webkit-transform-style: perspective;
+          transform-style: perspective;
+  -webkit-transform: rotateX(-35deg) translateY(100%);
+          transform: rotateX(-35deg) translateY(100%);
+  -webkit-transition: opacity ease .6s, visibility ease .6s, -webkit-transform ease .6s;
+  transition: opacity ease .6s, visibility ease .6s, -webkit-transform ease .6s;
+  transition: transform ease .6s, opacity ease .6s, visibility ease .6s;
+  transition: transform ease .6s, opacity ease .6s, visibility ease .6s, -webkit-transform ease .6s;
 }
 
 .popup_header {
@@ -1335,7 +1347,7 @@
       grid-template-columns: 1fr 2fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "item-1 item-2" "item-3 item-3";
+      grid-template-areas: "item-1 item-2" "item-3 item-3";
 }
 
 .popup_content_gallery_item {
@@ -1407,13 +1419,18 @@
   visibility: visible;
 }
 
+.popup.open .popup_body {
+  -webkit-transform: rotateX(0) translateY(0);
+          transform: rotateX(0) translateY(0);
+}
+
 .popup_close {
   width: 54px;
   height: 54px;
   background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
   position: fixed;
-  z-index: 100001;
-  left: 77%;
+  left: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1425,6 +1442,18 @@
           align-items: center;
 }
 
+.popup_close img {
+  -webkit-transition: -webkit-transform ease .4s;
+  transition: -webkit-transform ease .4s;
+  transition: transform ease .4s;
+  transition: transform ease .4s, -webkit-transform ease .4s;
+}
+
+.popup_close img:hover {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 .section_intro {
   background-color: #330066;
   color: white;
@@ -1433,6 +1462,7 @@
   font-size: 1.875rem;
   color: white;
   background-color: #330066;
+  position: relative;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1492,11 +1522,15 @@
   color: white;
 }
 
-#univesity_image {
-  height: 38vw;
+.intro_university_image {
   position: absolute;
   bottom: 0;
   right: 0;
+  height: 38vw;
+}
+
+#univesity_image {
+  height: 100%;
 }
 
 #univesity_image * {
@@ -2143,6 +2177,17 @@
   letter-spacing: 9px;
   width: 100%;
   height: 60px;
+  -webkit-transition: height ease .4s;
+  transition: height ease .4s;
+}
+
+.section_news .news_all_item_inner_more:hover {
+  height: 90px;
+}
+
+.section_news .news_all_item_inner_more a {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2626,7 +2671,7 @@
       grid-template-columns: 4fr 2fr 1fr 3fr;
   -ms-grid-rows: 12fr 5fr 18fr 12fr;
       grid-template-rows: 12fr 5fr 18fr 12fr;
-      grid-template-areas: "item-1 item-1 . ." "item-2 item-title item-title item-title" "item-2 item-3 item-3 item-4" "item-2 item-5 item-5 item-5";
+      grid-template-areas: "item-1 item-1 . ." "item-2 item-title item-title item-title" "item-2 item-3 item-3 item-4" "item-2 item-5 item-5 item-5";
   gap: 2%;
 }
 
@@ -2646,7 +2691,22 @@
   cursor: pointer;
 }
 
-.section_social .section_social_inner_gallery_item_img {
+.section_social .section_social_inner_gallery_item a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_social .section_social_inner_gallery_item a .icon {
   position: absolute;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -2657,21 +2717,7 @@
   z-index: 10000;
 }
 
-.section_social .section_social_inner_gallery_item a {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.section_social .section_social_inner_gallery_item a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-}
-
-.section_social .section_social_inner_gallery_item:not(.section_social_inner_gallery_label):after {
+.section_social .section_social_inner_gallery_item a:after {
   content: "";
   display: block;
   width: 100%;
@@ -2685,13 +2731,21 @@
   left: 0;
 }
 
-.section_social .section_social_inner_gallery_item:hover:after {
+.section_social .section_social_inner_gallery_item a:hover:after {
   opacity: 1;
 }
 
-.section_social .section_social_inner_gallery_item:hover .section_social_inner_gallery_item_img {
+.section_social .section_social_inner_gallery_item a:hover .icon {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.section_social .section_social_inner_gallery_item a .image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
 }
 
 .section_social .section_social_inner_gallery_item:nth-child(1) {
@@ -2825,10 +2879,10 @@
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   opacity: 0.5;
-  -webkit-transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
-  transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
-  transition: width ease .6s, filter ease .6s, opacity ease .6s;
-  transition: width ease .6s, filter ease .6s, opacity ease .6s, -webkit-filter ease .6s;
+  -webkit-transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
+  transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
+  transition: width ease .6s, filter ease .6s, opacity ease .6s;
+  transition: width ease .6s, filter ease .6s, opacity ease .6s, -webkit-filter ease .6s;
 }
 
 .section_sport .sport_gallery_item:hover {
@@ -2952,7 +3006,7 @@
       grid-template-columns: 60fr 40fr;
   -ms-grid-rows: 3fr 32fr 62fr 3fr;
       grid-template-rows: 3fr 32fr 62fr 3fr;
-      grid-template-areas: "item-1 ." "item-1 item-2" "item-3 item-2" ". item-2";
+      grid-template-areas: "item-1 ." "item-1 item-2" "item-3 item-2" ". item-2";
   gap: 23px;
 }
 
@@ -3171,7 +3225,7 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 2fr 1fr;
       grid-template-rows: 2fr 1fr;
-      grid-template-areas: "debut mrmsmtuci" "kinograd kinograd";
+      grid-template-areas: "debut mrmsmtuci" "kinograd kinograd";
 }
 
 .section_creation .creation_gallery:hover .creation_gallery_item {
@@ -3274,7 +3328,7 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "item-1 item-1" "item-2 item-main";
+      grid-template-areas: "item-1 item-1" "item-2 item-main";
 }
 
 .section_creation .creation_gallery_debut_item_main h3 {
@@ -3308,7 +3362,7 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "item-1 item-main" "item-1 item-2";
+      grid-template-areas: "item-1 item-main" "item-1 item-2";
 }
 
 .section_creation .creation_gallery_mrmsmtuci_item:nth-child(1) {
