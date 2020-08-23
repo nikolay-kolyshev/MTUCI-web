@@ -11,6 +11,7 @@ import instagramPostsInit from "./modules/instagramPosts.js";
 import mapInit from "./modules/map.js";
 import formValidateInit from "./modules/footer/formValidate.js";
 import popupInit from "./modules/popup.js";
+import calendarInit from "./modules/sectionEvents/calendar.js";
 
 window.onload = ()=> {
 
@@ -21,14 +22,14 @@ window.onload = ()=> {
     aboutMenuInit();
     // decorateBackInit("particles_science");
     // decorateBackInit("particles_partners"); // При наведении на партнёра поменять цвет частиц
-    // decorateBackInit("particles_sport");
+    // decorateBackInit("particles_sport");.
     // decorateBackInit("particles_creation");
     newsCardDecriptionInit();
     instagramPostsInit();
     mapInit();
     formValidateInit();
     popupInit();
-    
+    calendarInit();
     
     // Buttons Initializtion
     buttonsInit(".section_about .about_more .description_button"); // Section About

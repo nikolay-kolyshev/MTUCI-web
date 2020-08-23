@@ -74,18 +74,20 @@
     height: 100%;
    
     *{
-        transition: fill-opacity ease 3s;
+        transition: fill-opacity ease 3s, stroke-opacity ease 1s;
     }
 
 }
 .university_image_start_animation{
     *{
         fill-opacity: 0;
+        stroke-opacity: 0;
     }
 }
 .university_image_end_animation{
     *{
         fill-opacity: 1;
+        stroke-opacity: 1;
     }
 }
 
