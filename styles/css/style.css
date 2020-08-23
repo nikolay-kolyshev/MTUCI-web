@@ -5088,21 +5088,6 @@ A VERTICAL event
       grid-template-areas: "debut mrmsmtuci" "kinograd kinograd";
 }
 
-.section_creation .creation_gallery:hover .creation_gallery_item {
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-}
-
-.section_creation .creation_gallery_block:hover .creation_gallery_item {
-  -webkit-filter: blur(0px);
-          filter: blur(0px);
-}
-
-.section_creation .creation_gallery_block:hover .creation_gallery_item img {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
 .section_creation .creation_gallery_item_main {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
