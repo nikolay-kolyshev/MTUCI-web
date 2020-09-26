@@ -1393,6 +1393,8 @@ A VERTICAL event
   .fc-toolbar-title{
       font-family: $titleFont !important;
       color: $mainLightColor !important;
+      background-color: hsla(270, 100%, 20%, .7);
+      padding: 10px 20px;
   }
   .fc-header-toolbar{
       display: flex !important;
@@ -1427,7 +1429,9 @@ A VERTICAL event
   }
   .fc-header-toolbar{
       height: 30% !important;
-      background-color: $mainColor !important;
+      // background-image: url("../../../gif/events/calendar/autumn.gif") !important;
+      background-size: cover !important;
+      background-size: cover !important;
       margin-bottom: 0 !important;
       position: relative !important;
   }

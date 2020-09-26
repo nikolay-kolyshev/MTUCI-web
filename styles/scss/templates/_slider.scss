@@ -45,8 +45,6 @@
     align-items: flex-end;
 }
 
-
-
 .science_slider_main{
 
     @include Size(70%, 977px);
@@ -93,6 +91,8 @@
             padding: 64px 0;
         }
     }
+
+    
 
     // Кнопки (вправо и влево)
     .slick-arrow {
@@ -156,7 +156,7 @@
     position: relative;
 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
 
     .slick-track{
         display: block;

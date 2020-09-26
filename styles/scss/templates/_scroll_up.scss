@@ -1,0 +1,60 @@
+.scroll_up{
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 100000000000;
+    cursor: pointer;
+    border-radius: 50%;
+    @include Size(90px, 90px);
+    background-color: $mainLightColor;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+
+    transition: transform ease .4s,
+                opacity ease .4s,
+                visibility ease .4s;
+
+    &:hover{
+        .scroll_up_arrow{
+            transform: rotate(-90deg) scale(1.15);
+        }
+    }
+
+    &_inner{
+        font-size: ToRem(18);
+        display: flex;
+        flex-direction: column;
+        @include FlexCenter();
+        @include Size(100%,100%);
+
+        position: relative;
+    }
+
+    &_arrow{
+        transform: rotate(-90deg);
+        transition: transform ease .4s;
+    }
+
+    &_svg{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &_path{
+        fill: none;
+        stroke: $mainColor;
+        stroke-width: 4px;
+        transition: stroke ease .4s;
+    }
+
+}
+
+.scroll_up.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}

@@ -37,7 +37,6 @@ export default function PopupInit(){
 
             curentPopup.classList.add("open");
             curentPopup.onclick = e => {
-                debugger;
                 if (!e.target.closest(".popup_body")){
                     popupClose(e.target.closest(".popup"))
                 }

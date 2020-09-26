@@ -8,32 +8,34 @@
     position: relative;
     z-index: 100;
 
-    &:after{
-        content: "";
-        display: block;
-        @include Size(calc(100% - (#{$oneScreenWidth} - #{$oneScreenLeftFB}) - (100% - #{$oneScreenWidth})/2), 100%);
-        background-color: $backDarkColor;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-    }
+    // &:after{
+    //     content: "";
+    //     display: block;
+    //     @include Size(calc(100% - (#{$oneScreenWidth} - #{$oneScreenLeftFB}) - (100% - #{$oneScreenWidth})/2), 100%);
+    //     background-color: $backDarkColor;
+    //     position: absolute;
+    //     z-index: -1;
+    //     top: 0;
+    // }
 
     .sections_header{
         &_icon{
-            left: -127  px;
+            left: -127px;
         }
     }
 
-    .wrapper_one_screen{
+    .about_inner{
+
+        @include Size(100%,100%);
         display: flex;
+
     }
 
 }
 
 .about_more{
 
-
-    flex-basis: $oneScreenLeftFB;
+    width: 35%;
     min-height: 865px;
     position: relative;
 
@@ -109,7 +111,7 @@
     } // close &_icon
 
     &_description{
-        background-color: $backColor;
+        background-color: $backDarkColor;
         @include Size(100%, 50%);
     
         display: flex;
@@ -179,12 +181,12 @@
 
 .about_all{
 
+    width: 65%;
     font-family: $titleFont;
     font-weight: 600;
     text-transform: uppercase;
     color: $backDarkColor;
 
-    flex-grow: 1;
     background-color: $mainLightColor;
     display: flex;
     align-items: center;
@@ -223,6 +225,7 @@
 
             .navbar_icon{
                 transition: fill ease 0.4s;
+                height: 150px;
             }
 
             .navbar_title{

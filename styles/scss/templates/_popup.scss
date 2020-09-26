@@ -204,8 +204,11 @@
     }
 }
 
-
 #popup_event_1{
+
+    .popup_body::-webkit-scrollbar-thumb{
+        background: linear-gradient(to bottom, hsl(180, 95%, 36%), hsl(180, 95%, 80%));
+    }
 
     .popup_header{
         &_title{
@@ -237,6 +240,10 @@
 
 #popup_event_2{
 
+    .popup_body::-webkit-scrollbar-thumb{
+        background: linear-gradient(to bottom, hsl(322, 100%, 45%), hsl(322, 100%, 80%));
+    }
+
     .popup_header{
         &_title{
             background-color: hsl(322, 100%, 45%) !important;
@@ -266,6 +273,10 @@
 }
 
 #popup_event_3{
+
+    .popup_body::-webkit-scrollbar-thumb{
+        background: linear-gradient(to bottom, hsl(22, 100%, 50%), hsl(22, 100%, 80%));
+    }
 
     .popup_header{
         &_title{

@@ -12,7 +12,8 @@ export default function sliderInit(){
                     </svg>
                 </button>`,
                 
-            nextArrow: `<button type="button" class="slick-next">
+            nextArrow:
+                `<button type="button" class="slick-next">
                             <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61">
                                 <g id="science_arrow_right" transform="translate(-1262 -2.254)">
                                 <circle id="Эллипс_64" data-name="Эллипс 64" cx="30.5" cy="30.5" r="30.5" transform="translate(1262 2.254)" fill="#306"/>
@@ -45,7 +46,8 @@ export default function sliderInit(){
                     </svg>
                 </button>`,
                 
-            nextArrow: `<button type="button" class="slick-next">
+            nextArrow:
+                `<button type="button" class="slick-next">
                             <svg xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61">
                                 <g id="science_arrow_right" transform="translate(-1262 -2.254)">
                                 <circle id="Эллипс_64" data-name="Эллипс 64" cx="30.5" cy="30.5" r="30.5" transform="translate(1262 2.254)" fill="#306"/>
@@ -67,7 +69,21 @@ export default function sliderInit(){
             verticalSwiping: true,
             focusOnSelect: true,
             infinite: false,
-            arrows: false
+            arrows: false,
+
+            responsive: [
+
+                {
+                    breakpoint: 1000,
+                    settings: {
+
+                        vertical: false,
+                        verticalSwiping: false
+
+                    }
+                }
+
+            ]
         });
 
 }

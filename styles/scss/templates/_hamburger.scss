@@ -1,4 +1,4 @@
-.hamburglar {
+.hamburger {
     transform: scale(1);
     margin-right: 15px;
     position: relative;
@@ -41,7 +41,7 @@
     }
   }
 
-  .hamburglar.is-open {
+  .hamburger.is-open {
     .path {
       animation: dash-in 0.6s linear normal;
       animation-fill-mode:forwards;
@@ -52,7 +52,7 @@
     }
   }
   
-  .hamburglar.is-closed {
+  .hamburger.is-closed {
     .path {
       animation: dash-out 0.6s linear normal;
       animation-fill-mode:forwards;
@@ -74,6 +74,10 @@
     padding: 20px 16px;
     height: 68px;
     width: 68px;
+  }
+
+  .burger-ring .svg-ring > path{
+    stroke: $mainLightColor;
   }
   
   .burger-container {
@@ -130,7 +134,7 @@
   
   
   // bun animations 
-  .hamburglar.is-open {
+  .hamburger.is-open {
     .burger-bun-top {
       animation: bun-top-out 0.6s linear normal;
       animation-fill-mode:forwards;
@@ -140,7 +144,7 @@
       animation-fill-mode:forwards;
     }
   }
-  .hamburglar.is-closed {
+  .hamburger.is-closed {
     .burger-bun-top {
       animation: bun-top-in 0.6s linear normal;
       animation-fill-mode:forwards;
@@ -152,14 +156,14 @@
   }
 
   // burger filling
-.hamburglar.is-open {
+.hamburger.is-open {
     .burger-filling {
       animation: burger-fill-out 0.6s linear normal;
       animation-fill-mode:forwards;
     }
   }
   
-  .hamburglar.is-closed {
+  .hamburger.is-closed {
     .burger-filling {
       animation: burger-fill-in 0.6s linear normal;
       animation-fill-mode:forwards;

@@ -12,17 +12,19 @@ import mapInit from "./modules/map.js";
 import formValidateInit from "./modules/footer/formValidate.js";
 import popupInit from "./modules/popup.js";
 import calendarInit from "./modules/sectionEvents/calendar.js";
+import sportSelectInit from "./modules/sectionSport/sportSelect.js";
+import animateScroll from "./modules/animate_scroll.js";
+import scrollUpUnit from "./modules/scroll_up.js";
 
 window.onload = ()=> {
 
-    headerStickyInit();
-    sliderInit();
-    hamburgerInit();
     svgIntroInit();
+    headerStickyInit();
+    hamburgerInit();
     aboutMenuInit();
     // decorateBackInit("particles_science");
     // decorateBackInit("particles_partners"); // При наведении на партнёра поменять цвет частиц
-    // decorateBackInit("particles_sport");.
+    // decorateBackInit("particles_sport");
     // decorateBackInit("particles_creation");
     newsCardDecriptionInit();
     instagramPostsInit();
@@ -30,6 +32,10 @@ window.onload = ()=> {
     formValidateInit();
     popupInit();
     calendarInit();
+    sportSelectInit();
+    sliderInit();
+    animateScroll();
+    scrollUpUnit();
     
     // Buttons Initializtion
     buttonsInit(".section_about .about_more .description_button"); // Section About

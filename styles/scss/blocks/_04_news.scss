@@ -70,19 +70,19 @@
                     flex-grow: 1;
 
                     &_title {
-                        text-transform: uppercase;
-
                         width: 100%;
                         text-align: center;
                         font-weight: 300;
 
                         &_big {
                             font-size: ToRem(45);
+                            text-transform: uppercase;
                         }
 
                         &_small {
-                            font-size: ToRem(28);
+                            font-size: ToRem(32);
                             padding: 13px 0;
+                            text-transform: lowercase;
                         }
 
                         z-index: 10002;
@@ -136,6 +136,10 @@
             &:nth-child(1) {
                 margin-top: 34px;
                 transform: rotate(-7deg);
+
+                .news_all_item_inner_main_title_big {
+                    text-decoration: line-through;
+                }
 
                 .news_all_item_inner_main_title_small {
                     background-color: hsl(180, 95%, 36%);

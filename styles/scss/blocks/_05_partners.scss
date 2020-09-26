@@ -35,7 +35,6 @@
 
         &_item{
             
-            height: 457px;  
             display: flex;
             justify-content: space-between;
 
@@ -52,6 +51,7 @@
             
             &_logo{
                 width: 50%;
+                height: 457px;
                 letter-spacing: 100px;
                 transition: transform ease .4s;
 
@@ -65,6 +65,7 @@
 
             &_description{
                 width: 50%;
+                height: 457px;  
                 padding: 0 64px;
 
                 display: flex;

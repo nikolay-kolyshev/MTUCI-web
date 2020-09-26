@@ -2,9 +2,10 @@ export default function headerStickyInit() {
 
     const stickyHeader = document.querySelector(".main_header");
     const $stickyContact = $(".nav_contact");
-    const stickyLogin = document.querySelector(".header_login");
-    const stickyAside = document.querySelector(".header_aside");
-    const stickyPages = document.querySelector(".nav_pages");
+    const stickyLogin = document.querySelector(".main_header .header_login");
+    const stickyAside = document.querySelector(".main_header .header_aside");
+    const stickyPages = document.querySelector(".main_header .nav_pages");
+    const stickyNav = document.querySelector(".main_header .header_nav");
 
     const option = {
         root: null,
@@ -21,6 +22,7 @@ export default function headerStickyInit() {
             stickyLogin.classList.add("header_login_sticky");
             stickyAside.classList.add("header_aside_sticky");
             stickyPages.classList.add("nav_pages_sticky");
+            stickyNav.classList.add("header_nav_sticky");
           }
           else
           {
@@ -29,6 +31,7 @@ export default function headerStickyInit() {
             stickyLogin.classList.remove("header_login_sticky");
             stickyAside.classList.remove("header_aside_sticky");
             stickyPages.classList.remove("nav_pages_sticky");
+            stickyNav.classList.remove("header_nav_sticky");
           }
       });
     }

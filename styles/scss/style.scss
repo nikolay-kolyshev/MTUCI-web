@@ -6,15 +6,17 @@
 @import "_mixins.scss";
 
 // Шаблоны
+@import "templates/_scrollbar.scss";
 @import "templates/_grid.scss";
+@import "templates/_hamburger.scss";
 @import "templates/_header.scss";
 @import "templates/_footer.scss";
 @import "templates/_sections_header.scss";
-@import "templates/_hamburger.scss";
 @import "templates/_slider.scss";
 @import "templates/_sections_seperators.scss";
 @import "templates/_popup.scss";
 @import "templates/_calendar.scss";
+@import "templates/_scroll_up.scss";
 
 // Блоки на первой странице (лендинге)
 @import "blocks/_01_intro.scss";
@@ -28,6 +30,7 @@
 @import "blocks/_09_creation.scss";
 @import "blocks/_10_map.scss";
 
+
 html{
     font-family: $mainFont;
     font-weight: 400;
@@ -40,7 +43,7 @@ body.lock{
 }
 
 .main_content{
-    margin-top: -165px;
+    margin-top: -153px;
     overflow: hidden;
     position: relative;
 }
@@ -58,3 +61,7 @@ body.lock{
     }
 
 }
+
+
+// медиазапросы
+@import "templates/_media.scss";

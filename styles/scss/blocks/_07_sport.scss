@@ -32,10 +32,10 @@
 
     .sport_gallery{
 
-        height: 890px;
         cursor: pointer;
         align-items: center;
         margin-bottom: 108px;
+        height: 890px;
 
         display: flex;
         justify-content: space-between;
@@ -44,6 +44,8 @@
 
             position: relative;
             @include Size(calc(100% / #{$sportNumbGallery}), 90%);
+            flex-basis: 200px;
+            flex-grow: 1;
             
             margin: 0 16px;
             filter: grayscale(1);
@@ -89,8 +91,7 @@
     }
 
     .sport_info{
-
-        height: 800px;
+        
         display: flex;
         
         &_description{
@@ -113,7 +114,6 @@
 
             &_button{
 
-                width: inherit;
                 padding: 15px 30px;
             
                 color: $mainColor;

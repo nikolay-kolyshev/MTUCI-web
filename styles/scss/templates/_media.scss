@@ -1,0 +1,1361 @@
+@media screen and (max-width: 1800px){
+
+    // Main Header
+    .main_header{
+
+        .header_nav{
+            padding: 0 40px;
+        }
+
+        .header_aside{
+            width: 250px;
+            &:after{
+                width: 250px;
+            }
+
+            .header_title{
+                font-size: ToRem(50);
+            }
+        }
+
+        .header_login{
+            width: 270px;
+            padding-right: 30px;
+        }
+
+    }
+
+    .section_science{
+
+        .science_slider{
+
+            .item_description{
+
+                font-size: ToRem(75);
+
+            }
+
+        }
+
+    }    
+
+}
+
+@media screen and (max-width: 1650px){
+
+    // Main Header
+    .main_header{
+        font-size: ToRem(22);
+        .nav_contact{
+            font-size: ToRem(26);
+        }
+    }
+
+    // Section Intro
+    .section_intro{
+
+        font-size: ToRem(20);
+
+        .intro_description_title{
+
+            h1{
+                 font-size: ToRem(100);
+              }
+             h2{
+                 font-size: ToRem(39);
+             }
+             h3{
+                 letter-spacing: 150;
+                 margin-bottom: -10px;
+             }
+        }
+
+        .intro_desciption_main{
+            margin-top: 20px;
+        }
+    }
+
+    .section_about{
+
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+
+            &_icon{
+                left: -120px;
+                height: 100px;
+            }
+            
+        }
+
+    }
+
+    .section_science{
+
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+            
+        }
+
+    }
+
+    .section_partners{
+        
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+            
+        }
+
+    }
+
+    .section_sport{
+        
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+            
+        }
+
+    }
+
+    .section_events{
+        
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+            
+        }
+
+    }
+
+    .section_creation{
+        
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+            
+        }
+
+    }
+
+    .section_map{
+        
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+            
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1500px){
+
+    // Main Header
+    .main_header{
+        font-size: ToRem;
+    }
+    
+    .section_about{
+
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(35);
+            }
+
+            &_icon{
+                left: -120px;
+                height: 100px;
+            }
+            
+        }
+
+        .wrapper_one_screen{
+        }
+
+        .about_all{
+
+            .navbar_icon{
+                height: 120px;
+            }
+
+        }
+
+    }
+
+    .section_science{
+
+        .science_info{
+
+            .science_info_header{
+                .header_icon{
+                    height: 200px;
+                }
+
+                .header_title{
+                    font-size: ToRem(40);
+                }
+            }
+
+            .science_info_description{
+                .description_text{
+                    font-size: ToRem(22);
+                }
+            }
+
+        }
+
+    }
+    
+}
+
+@media screen and (max-width: 1400px){
+
+
+    // Main Header
+    .main_header{
+
+        margin-top: 10px;
+        font-size: ToRem(26);
+
+        .header_aside{
+            width: 450px;
+            &:after{
+                width: 450px;
+                left: -450px;
+            }
+            .header_title{
+                transition: color ease .4s;
+            }
+            .hamburger{
+                display: block;
+            }
+        }
+        .header_aside.open{
+
+            .header_title{
+                color: $mainColor;
+            }
+
+            .hamburger{
+
+                .path-rotation {
+                    &:before {
+                      background: $mainColor;
+                    }
+                  }
+
+                .burger-bun-top,
+                .burger-bun-bot,
+                .burger-filling {
+                    background: $mainColor;
+  }
+            }
+            .burger-ring .svg-ring > path{
+                stroke: $mainColor;
+            }
+        }
+
+        .header_nav{
+
+            transform: translateY(-150%);
+            transition: transform ease 1s;
+
+            position: absolute;
+            top: -41px; 
+            left: 0;
+            z-index: -1000;
+            overflow: auto;
+
+            height: 100vh;
+            width: 450px;
+            background-color: $mainLightColor;
+            color: $mainColor;
+            padding: 200px 0 0 0;
+
+            display: flex;
+            flex-direction: column;
+        }
+        .header_nav.open{
+
+            transform: translateY(0);
+        }
+
+        .nav_contact{
+            font-size: ToRem(40);
+            display: flex;
+            justify-content: center;
+            a{
+                padding: 0 10px;
+            }
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            }
+        }
+
+        .nav_pages{
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            flex-grow: 1;
+
+            a{
+                margin: 40px 0;
+                width: 100%;
+
+                &:before{
+                    width: 0%;
+                }
+
+                &:after{
+                    background-color: $mainColor;
+                }
+
+                &:hover:after{
+                    width: 70%;
+                }
+            }
+        }
+
+
+        .header_nav_sticky{
+            padding-top: 110px;
+            top: 0;
+            background-color: hsla(270, 100%, 20%, 0.863);
+            color: $mainLightColor;
+        }
+        .nav_pages_sticky{
+            a:after{
+                display: none;
+            }
+            a:hover
+            {
+                color: $mainColor;
+                &:before{
+                    background-color: $mainLightColor;
+                    width: 100%;
+                }
+            }
+        }
+        .header_aside_sticky{
+            
+            &:after{
+                left:0;
+            }
+
+            .header_title{
+                color: $mainLightColor;
+            }
+
+            .hamburger{
+
+                .path-rotation {
+                    &:before {
+                      background: $mainLightColor;
+                    }
+                  }
+
+                .burger-bun-top,
+                .burger-bun-bot,
+                .burger-filling {
+                    background: $mainLightColor;
+  }
+            }
+            .burger-ring .svg-ring > path{
+                stroke: $mainLightColor;
+            }
+
+        }
+        .header_aside_sticky.open{
+            
+            .header_title{
+                color: $mainLightColor;
+            }
+
+            .hamburger{
+
+                .path-rotation {
+                    &:before {
+                      background: $mainLightColor;
+                    }
+                  }
+
+                .burger-bun-top,
+                .burger-bun-bot,
+                .burger-filling {
+                    background: $mainLightColor;
+  }
+            }
+            .burger-ring .svg-ring > path{
+                stroke: $mainLightColor;
+            }
+
+        }
+
+    }
+
+    .section_about{
+
+
+        .sections_header{
+
+            position: static;
+
+            &_title{
+                background-color: $mainLightColor;
+                color: $mainColor;
+                padding: 50px 0;
+                width: 100%;
+                position: static;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:after{
+                    content: "";
+                    display: block;
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    position: static;
+
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                h2{
+                    white-space: nowrap;
+                }
+                
+            }
+
+        }
+
+        .about_more{
+
+            width: 50%;
+
+            &_icon{
+                &:before{
+                    width: 400px;
+                }
+
+                &_inner{
+
+                    // .percentage_value{
+                    //     font-size: ToRem(80);
+                    // }
+
+                    // .percentage_name{
+                    //     font-size: ToRem(18);
+                    // }
+
+                }
+            }
+
+            canvas{
+                width: 400px !important;
+                height: 400px !important;
+            }
+
+            // .description_button{
+            //     font-size: ToRem(28);
+            // }
+        }
+
+        .about_all{
+
+            width: 50%;
+
+            &_navbar{
+                grid-template-columns: 1fr;
+                grid-row-gap: 50px;
+                grid-column-gap: 0;
+            }
+
+            .navbar_icon{
+                height: 110px;
+            }
+
+            .navbar_title{
+                font-size: ToRem(25);
+            }
+
+        }
+
+    }
+
+    .section_science{
+
+        .sections_header{
+
+            position: static;
+
+            width: 100%;
+            align-items: center;
+
+            &_title{
+                background-color: transparent;
+                color: $mainColor;
+                padding: 50px 0;
+                width: 100%;
+                position: static;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:after{
+
+                    content: "";
+                    display: block;
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                &:before{
+
+                    content: "";
+                    display: block;
+                    position: static;
+
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+            }
+
+            &_icon{
+            }
+            
+        }
+
+        .science_slider{
+
+            .science_slider_main{
+                height: 699px;
+
+                &_item{
+                    height: 699px;
+                }
+
+                .item_description{
+                    font-size: ToRem(60);
+                }
+            }
+
+            .science_slider_secondary{
+
+                height: 699px;
+    
+                &_item{
+                    height: 233px;
+                }
+    
+            }
+
+        }
+
+        .science_info{
+
+            &_item{
+
+                .science_info_header{
+                    .header_icon{
+                        height: 200px;
+                    }
+                    .header_title{
+                        font-size: ToRem(35);
+                    }
+                }
+
+                .science_info_description{
+                    .description_text{
+                        font-size: ToRem(20);
+                    }
+                    .description_button{
+                        font-size: ToRem(18);
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    .section_partners{
+
+        padding-top: 200px;
+
+        .sections_header{
+
+            position: static;
+
+            &_title{
+                background-color: transparent;
+                color: $mainColor;
+                padding: 50px 0;
+                width: 100%;
+                position: static;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:after{
+                    content: "";
+                    display: block;
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    position: static;
+
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                h2{
+                    white-space: nowrap;
+                }
+                
+            }
+
+        }
+        
+        .partners_info{
+
+            &_item{
+
+                &:hover{
+                    .partners_info_item_logo img{
+                            transform: scale(0.9);
+                    }
+                }
+
+                &_logo{
+                    height: 350px;
+                    img{
+                        transform: scale(0.7);
+                    }
+                }
+
+                &_description{
+                    height: 350px;
+                    &_title{
+                        font-size: ToRem(35);
+                    }
+                    &_text{
+                        font-size: ToRem(20);
+                    }
+                    &_button{
+                        font-size: ToRem(18);
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .section_sport{
+
+        .sections_header{
+
+            position: static;
+
+            &_title{
+                background-color: transparent;
+                color: $mainColor;
+                padding: 50px 0;
+                width: 100%;
+                position: static;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:after{
+                    content: "";
+                    display: block;
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    position: static;
+
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                h2{
+                    white-space: nowrap;
+                }
+                
+            }
+
+        } 
+
+        .sport_inner{
+            padding: 0;
+        }
+
+        .sport_gallery{
+
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto;
+
+            &_item{
+                height: 500px;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        .sport_info{
+
+            &_img{
+                height: 600px;
+            }
+
+        }
+
+    }
+
+    .section_events{
+
+        .sections_header{
+
+            position: static;
+
+            &_title{
+                background-color: transparent;
+                color: $mainColor;
+                padding: 50px 0;
+                width: 100%;
+                position: static;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:after{
+                    content: "";
+                    display: block;
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    position: static;
+
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                h2{
+                    white-space: nowrap;
+                }
+                
+            }
+
+        }
+
+        .events_inner{
+
+            flex-direction: column;
+            .events_calendar{
+                width: 100%;
+                height: 400px;
+            }
+    
+            .events_info{
+                width: 100%;
+                height: 600px;
+            }
+
+        }
+
+    }
+
+    .section_creation{
+
+        .sections_header{
+
+            position: static;
+
+            &_title{
+                background-color: transparent;
+                color: $mainColor;
+                padding: 50px 0;
+                width: 100%;
+                position: static;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:after{
+                    content: "";
+                    display: block;
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                &:before{
+                    content: "";
+                    display: block;
+                    position: static;
+
+
+                    @include Size(100%, 3px);
+                    background-color: $mainColor;
+                    border-radius: 3px;
+                    margin: 0 50px;
+                }
+
+                h2{
+                    white-space: nowrap;
+                }
+                
+            }
+
+        }
+
+        .creation_gallery{
+
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: "debut debut"
+                                  "mrmsmtuci mrmsmtuci"
+                                  "kinograd kinograd";
+
+            .creation_gallery_kinograd {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            &_item_main{
+
+                h3{
+                    font-size: ToRem(40);    
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+
+    // Section Intro
+    .section_intro{
+
+        font-size: ToRem(18);
+
+        .intro_description{
+            padding: 0 30px;
+        }
+
+        .intro_description_title{
+
+            h1{
+                 font-size: ToRem(80);
+              }
+             h2{
+                 font-size: ToRem(30);
+             }
+             h3{
+                 letter-spacing: 150;
+                 margin-bottom: -10px;
+             }
+        }
+
+        .intro_desciption_main{
+            margin-top: 20px;
+        }
+    }
+
+    .section_about{
+
+        .about_more{
+
+            &_icon{
+                &:before{
+                    width: 350px;
+                }
+
+                &_inner{
+
+                    .percentage_value{
+                        font-size: ToRem(80);
+                    }
+
+                    .percentage_name{
+                        font-size: ToRem(18);
+                    }
+
+                }
+            }
+
+            canvas{
+                width: 350px !important;
+                height: 350px !important;
+            }
+
+        }
+
+    }
+
+    .section_science{
+
+        .science_slider{
+
+            .item_description{
+
+                font-size: ToRem(50);
+
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1100px){
+
+    // Section Intro
+    .section_intro{
+
+        font-size: ToRem(15);
+
+        .intro_description_title{
+
+            h1{
+                 font-size: ToRem(65);
+              }
+             h2{
+                 font-size: ToRem(25);
+             }
+             h3{
+                 letter-spacing: 150;
+                 margin-bottom: -10px;
+             }
+        }
+
+        .intro_desciption_main{
+            margin-top: 20px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1000px){
+
+    // Section Intro
+    .section_intro{
+
+        font-size: ToRem(15);
+
+        .intro_inner{
+            flex-direction: column;
+        }
+
+        .intro_description_title{
+
+            h1{
+                 font-size: ToRem(80);
+              }
+             h2{
+                 font-size: ToRem(30);
+             }
+             h3{
+                 letter-spacing: 150;
+                 margin-bottom: -10px;
+             }
+        }
+
+        .intro_desciption_main{
+            margin-top: 20px;
+        }
+
+        .intro_university_image {
+            width: 100%;
+        }
+    
+        #univesity_image{
+            height: 95%;
+            // position: absolute;
+            // top: 0;2
+        
+            *{
+                transition: fill-opacity ease 3s, stroke-opacity ease 1s;
+            }
+    
+        }
+    }
+
+}
+
+@media screen and (max-width: 991px){
+
+
+    .section_about{
+
+        .about_inner{
+
+            flex-direction: column;
+
+        }
+
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(30);
+                padding: 30px 0;
+            }
+            
+        }
+
+        .about_more{
+            width: 100%;
+
+            min-height: auto;
+            height: 500px;
+
+            &_img{
+                height: calc(100% - 80px);
+            }
+
+            &_icon{
+
+                margin-bottom: 80px;
+
+            }
+
+            &_description{
+
+                height: 80px;
+
+
+                .description_text{
+                    display: none;
+                }
+
+                .description_button{
+
+                    height: 80px;
+                    font-size: ToRem(20);
+
+                }
+            }
+        }
+
+        .about_all{
+            width: 100%;
+
+            padding: 40px 0;
+
+            &_navbar{
+
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+
+                &_item{
+                    grid-column: auto !important;
+                }
+
+                .navbar_icon{
+                    height: 90px;
+                }
+    
+                .navbar_title{
+                    font-size: ToRem(22);
+                }
+
+            }
+        }
+
+    }
+
+    .section_science{
+
+        .sections_header{
+
+            &_title{
+                font-size: ToRem(30);
+            }
+            
+        }
+
+        .science_slider{
+            flex-direction: column;
+            align-items: center;
+        
+            .science_slider_main{
+                @include Size(100%, 450px);
+    
+                &_item{
+                    height: 450px;
+                }
+
+                .item_description{
+                    padding: 40px 0;
+                }
+
+                .slick-arrow{
+                    svg{
+                        @include Size(45px, 45px);
+                    }
+                }
+            }
+
+            .science_slider_secondary{
+                @include Size(100%, 240px);
+
+                &_item{
+                    height: 240px;
+                }
+
+                margin-bottom: 0;
+    
+                .slick-track{
+                    display: flex;
+                }
+            }
+        }
+
+        .science_info{
+
+            flex-direction: column;
+            margin-top: 40px;
+
+            &_item{
+
+                padding: 30px 0;
+
+                .science_info_header{
+                    .header_icon{
+                        height: 200px;
+                    }
+                    .header_title{
+                        font-size: ToRem(35);
+                    }
+                }
+
+                .science_info_description{
+                    .description_text{
+                        font-size: ToRem(20);
+                        padding-top: 10px;
+                    }
+                    .description_button{
+                        font-size: ToRem(18);
+                    }
+
+                    &:before{
+                        display: none;
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .section_partners{
+
+        .partners_info{
+
+            &_item{
+
+                flex-direction: column;
+
+                &:hover{
+
+                    .partners_info_item_logo{
+                        transform: none;
+                    }
+    
+                }
+
+                &_logo{
+                    width: 100%;
+                }
+
+                &_description{
+
+                    width: 100%;
+
+                    &_title{
+                        font-size: ToRem(35);
+                    }
+                    &_text{
+                        font-size: ToRem(20);
+                    }
+                    &_button{
+                        font-size: ToRem(18);
+                    }
+                }
+
+                &:nth-child(2){
+
+                    &:hover .partners_info_item_logo{
+                        transform: none;
+                    }
+    
+                    .partners_info_item_logo{
+                        order: 0;
+                    }
+                }
+
+            }
+
+        }
+
+    } 
+
+    .section_sport{
+
+        .sport_gallery{
+
+            &_item{
+                height: 300px;
+            }
+
+        }
+
+        .sport_info{
+
+            flex-direction: column;
+
+            &_description{
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+            &_img{
+                height: 600px;
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 850px){
+
+    .section_about{
+
+        .about_all{
+
+            &_navbar{
+
+                grid-template-columns: 1fr;
+
+                .navbar_icon{
+                    height: 80px;
+                }
+    
+                .navbar_title{
+                    font-size: ToRem(18);
+                }
+
+            }
+
+        }
+
+    }
+
+    .section_science{
+
+        .science_slider{
+
+            .science_slider_main{
+                .item_description{
+                    font-size: ToRem(40);
+                }    
+            }
+
+        }
+
+    }
+
+}
+
+
+

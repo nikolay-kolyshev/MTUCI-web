@@ -15,17 +15,17 @@
 
         display: flex;
         justify-content: center;
-        height: 850px;
 
         .events_calendar{
 
-            // background-color: $backColor;
+            height: 850px;
             width: 40%;
 
         }
 
         .events_info{
             width: 60%;
+            height: 850px;
 
             display: flex;
             flex-direction: column;
@@ -94,6 +94,23 @@
         } // .events_info
 
     } // .events_inner
+
+    .sections_seperators{
+
+        &_top{
+
+            &_img{
+                transform: rotate(2deg);
+            }
+
+            top: -330px;
+        }
+
+        &_bottom{
+            bottom: -307px;
+        }
+
+    }
 
     
 
