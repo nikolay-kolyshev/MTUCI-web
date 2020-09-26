@@ -71,22 +71,22 @@ export default function mapInit(){
         ]
     };
 
-    let pointMetroMain = {
-        "type": "FeatureCollection",
-        "features": [
-          {
-            "type": "Feature",
-            "properties": {},
-            "geometry": {
-              "type": "Point",
-              "coordinates": [
-                37.71711554378271,
-                55.752352236979675
-              ]
-            }
-          }
-        ]
-    };
+    // let pointMetroMain = {
+    //     "type": "FeatureCollection",
+    //     "features": [
+    //       {
+    //         "type": "Feature",
+    //         "properties": {},
+    //         "geometry": {
+    //           "type": "Point",
+    //           "coordinates": [
+    //             37.71711554378271,
+    //             55.752352236979675
+    //           ]
+    //         }
+    //       }
+    //     ]
+    // };
 
     let pointUniversitySecond = {
         "type": "FeatureCollection",
@@ -122,22 +122,22 @@ export default function mapInit(){
 
     });
 
-    pointMetroMain.features.forEach(function(marker){
+    // pointMetroMain.features.forEach(function(marker){
 
-        let el = document.createElement('img');
-        el.style.height = "70px";
-        el.src = "../images/svg/map/marker.svg";
+    //     let el = document.createElement('img');
+    //     el.style.height = "70px";
+    //     el.src = "../images/svg/map/marker.svg";
 
-        new mapboxgl.Marker(
-            {
-                element: el,
-            }
-        )
-          .setLngLat(marker.geometry.coordinates)
-          .setPopup(new mapboxgl.Popup().setHTML("<h1>Ближайшее метро</h1>"))
-          .addTo(map);
+    //     new mapboxgl.Marker(
+    //         {
+    //             element: el,
+    //         }
+    //     )
+    //       .setLngLat(marker.geometry.coordinates)
+    //       .setPopup(new mapboxgl.Popup().setHTML("<h1>Ближайшее метро</h1>"))
+    //       .addTo(map);
 
-    });
+    // });
 
     pointUniversitySecond.features.forEach(function(marker){
 

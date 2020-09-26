@@ -207,8 +207,8 @@
                 @include Size(64px, 64px);
 
                 position: absolute;
-                bottom: -32px;
-                right: 32px;
+                bottom: -0;
+                left: -32px;
                 background-color: $backColor;
                 border-radius: 50%;
                 transition: transform ease .4s;
