@@ -579,7 +579,7 @@
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "instagram twiiter" "vk youtube";
+      grid-template-areas: "instagram twiiter" "vk youtube";
   gap: 15px;
 }
 
@@ -667,8 +667,8 @@
   background-color: #280050;
   color: #E5E0EB;
   width: 100%;
-  -webkit-transition: background-color ease .4s, color ease .4s;
-  transition: background-color ease .4s, color ease .4s;
+  -webkit-transition: background-color ease .4s, color ease .4s;
+  transition: background-color ease .4s, color ease .4s;
 }
 
 .main_footer .footer_connect_form_input::-webkit-input-placeholder {
@@ -1352,7 +1352,7 @@
       grid-template-columns: 1fr 2fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "item-1 item-2" "item-3 item-3";
+      grid-template-areas: "item-1 item-2" "item-3 item-3";
 }
 
 .popup_content_gallery_item {
@@ -3818,6 +3818,7 @@ A VERTICAL event
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
 }
 
 .link_more_link {
@@ -4648,7 +4649,7 @@ A VERTICAL event
       grid-template-columns: 4fr 2fr 1fr 3fr;
   -ms-grid-rows: 12fr 5fr 18fr 12fr;
       grid-template-rows: 12fr 5fr 18fr 12fr;
-      grid-template-areas: "item-1 item-1 . ." "item-2 item-title item-title item-title" "item-2 item-3 item-3 item-4" "item-2 item-5 item-5 item-5";
+      grid-template-areas: "item-1 item-1 . ." "item-2 item-title item-title item-title" "item-2 item-3 item-3 item-4" "item-2 item-5 item-5 item-5";
   gap: 2%;
 }
 
@@ -4852,19 +4853,14 @@ A VERTICAL event
   position: relative;
   width: calc(100% / 7);
   height: 90%;
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   margin: 0 16px;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
   opacity: 0.5;
-  -webkit-transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
-  transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
-  transition: width ease .6s, filter ease .6s, opacity ease .6s;
-  transition: width ease .6s, filter ease .6s, opacity ease .6s, -webkit-filter ease .6s;
+  -webkit-transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
+  transition: width ease .6s, opacity ease .6s, -webkit-filter ease .6s;
+  transition: width ease .6s, filter ease .6s, opacity ease .6s;
+  transition: width ease .6s, filter ease .6s, opacity ease .6s, -webkit-filter ease .6s;
 }
 
 .section_sport .sport_gallery_item:hover {
@@ -4938,13 +4934,14 @@ A VERTICAL event
 
 .section_sport .sport_info_description_button {
   padding: 15px 30px;
+  display: inline-block;
   color: #330066;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.4375rem;
   font-weight: 500;
   background-color: #E5E0EB;
   position: relative;
-  z-index: 1001;
+  z-index: 10001;
   overflow: hidden;
   -webkit-transition: color ease 0.4s;
   transition: color ease 0.4s;
@@ -4986,7 +4983,7 @@ A VERTICAL event
       grid-template-columns: 60fr 40fr;
   -ms-grid-rows: 3fr 32fr 62fr 3fr;
       grid-template-rows: 3fr 32fr 62fr 3fr;
-      grid-template-areas: "item-1 ." "item-1 item-2" "item-3 item-2" ". item-2";
+      grid-template-areas: "item-1 ." "item-1 item-2" "item-3 item-2" ". item-2";
   gap: 23px;
 }
 
@@ -5208,7 +5205,7 @@ A VERTICAL event
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 2fr 1fr;
       grid-template-rows: 2fr 1fr;
-      grid-template-areas: "debut mrmsmtuci" "kinograd kinograd";
+      grid-template-areas: "debut mrmsmtuci" "kinograd kinograd";
 }
 
 .section_creation .creation_gallery_item_main {
@@ -5296,7 +5293,7 @@ A VERTICAL event
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "item-1 item-1" "item-2 item-main";
+      grid-template-areas: "item-1 item-1" "item-2 item-main";
 }
 
 .section_creation .creation_gallery_debut_item_main h3 {
@@ -5330,7 +5327,7 @@ A VERTICAL event
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "item-1 item-main" "item-1 item-2";
+      grid-template-areas: "item-1 item-main" "item-1 item-2";
 }
 
 .section_creation .creation_gallery_mrmsmtuci_item:nth-child(1) {
@@ -6138,6 +6135,11 @@ body.lock {
   .section_sport .sport_gallery_item {
     height: 500px;
     margin-bottom: 30px;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
   .section_sport .sport_info_img {
     height: 600px;
